@@ -1,0 +1,7 @@
+numpy==1.26
+crepe
+mir_eval
+librosa
+essentia
+tqdm
+pandas
