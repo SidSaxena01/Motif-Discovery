@@ -1,8 +1,6 @@
-# main.py
-
 import os
-
 import pandas as pd
+import argparse
 
 from audio_extractor import AudioExtractor
 from extractors.crepe_extractor import CrepeExtractor
@@ -10,20 +8,65 @@ from extractors.melodia_extractor import MelodiaExtractor
 from extractors.rhythm_extractor_2013_extractor import EssentiaTempoExtractor
 
 
+def collect_input_files(input_arg):
+    """
+    Given an argument that may be a single file, multiple comma-separated files, or a directory,
+    return a list of valid file paths.
+    """
+    # If it's a directory, return all valid files within (e.g. audio files).
+    if os.path.isdir(input_arg):
+        # Collect all files within the directory. Adjust filter if needed to match audio file types.
+        file_list = []
+        for root, _, files in os.walk(input_arg):
+            for f in files:
+                # Simple filter - you can add more extensions if needed
+                if f.lower().endswith(('.wav', '.flac', '.mp3', '.aac')):
+                    file_list.append(os.path.join(root, f))
+        return file_list
+    else:
+        # Possibly comma-separated
+        if ',' in input_arg:
+            inputs = [item.strip() for item in input_arg.split(',')]
+        else:
+            inputs = [input_arg.strip()]
+        # Filter out invalid paths
+        valid_files = [f for f in inputs if os.path.isfile(f)]
+        return valid_files
+
+
 def main():
-    # Paths (update to real paths in your environment)
-    input_files = [
-        "/Users/fernando/dev/upf/mir/motif-detection/John Williams & London Symphony Orchestra - Star Wars - The Ultimate Digital Collection (2016 - Soundtracks) [Flac 24-44_192]/46. John Williams & London Symphony Orchestra - Episode IV - Main Title.flac",
-        "/Users/fernando/dev/upf/mir/motif-detection/John Williams & London Symphony Orchestra - Star Wars - The Ultimate Digital Collection (2016 - Soundtracks) [Flac 24-44_192]/47. John Williams & London Symphony Orchestra - Episode IV - Imperial Attack.flac",
-        # ...
-    ]
-    output_folder = "/Users/fernando/dev/upf/mir/motif-detection/output_folder"
+    parser = argparse.ArgumentParser(
+        description="Motif Detection CLI",
+        usage="python main.py --input <file|file1,file2|directory> [--output <folder>]"
+    )
+    parser.add_argument(
+        "-i",
+        "--input",
+        required=True,
+        help="Path to a single audio file, multiple comma-separated files, or a directory containing audio files.",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="output_folder",
+        help="Path to the output directory. Defaults to 'output_folder'.",
+    )
+    args = parser.parse_args()
+
+    # Prepare input files
+    input_files = collect_input_files(args.input)
+    if not input_files:
+        print("No valid input files found.")
+        return
+
+    # Make sure output directory exists
+    output_folder = args.output
     os.makedirs(output_folder, exist_ok=True)
 
     # Option 1: Use Melodia for melody extraction
-    melodia = MelodiaExtractor(frame_size=2048, hop_size=128, sample_rate=44100)
+    melodia_extractor = MelodiaExtractor(frame_size=2048, hop_size=128, sample_rate=44100)
 
-    # # Option 2: Use CREPE for melody extraction
+    # Option 2: Use CREPE for melody extraction (commented out for demonstration)
     # crepe_extractor = CrepeExtractor(
     #     model_capacity='full',
     #     use_viterbi=True,
@@ -31,39 +74,37 @@ def main():
     #     crepe_verbose_level=1
     # )
 
-    # Tempo extractor using Essentia
+    # Create tempo extractor
     tempo_extractor = EssentiaTempoExtractor(method="multifeature")
 
     # Choose which melody extractor you want at runtime:
-    melody_extractor = melodia  # or crepe_extractor
+    melody_extractor = melodia_extractor  # or crepe_extractor
 
-    # Create the AudioExtractor orchestrator
+    # Create the orchestrator
     audio_extractor = AudioExtractor(
         melody_extractor=melody_extractor,
         tempo_extractor=tempo_extractor,
         target_sr=44100,
     )
 
-    # Process multiple files
+    # Process files
     results = audio_extractor.process_multiple_audio_files(
         input_filepaths=input_files, output_folder=output_folder
     )
 
-    # Print or log the results
-    for res in results:
-        print(f"File: {res['file']}")
-        print(f"Output WAV: {res['output_wav']}")
-        print(f"Extraction Results:")
-        print(f"  - BPM: {res['bpm']}")
-        print(f"  - Melody Extractor: {res['algo']}")
-        print("----\n")
+    # # Display results
+    # for res in results:
+    #     print(f"File: {res['file']}")
+    #     print(f"Output WAV: {res['output_wav']}")
+    #     print("Extraction Results:")
+    #     print(f"  - BPM: {res['bpm']}")
+    #     print(f"  - Melody Extractor: {res['algo']}")
+    #     print("----\n")
 
-    # Save results to a CSV file
+    # Save CSV
     csv_file = os.path.join(output_folder, "results.csv")
-    df = pd.DataFrame(results)
-    df.to_csv(os.path.join(output_folder, csv_file), index=False)
+    pd.DataFrame(results).to_csv(csv_file, index=False)
     print(f"Results saved to {csv_file}")
-
 
 if __name__ == "__main__":
     main()
