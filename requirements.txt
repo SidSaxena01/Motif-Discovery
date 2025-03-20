@@ -6,3 +6,8 @@ essentia
 tqdm
 pandas
 tensorflow
+jupyterlab
+stumpy
+music21
+dtaidistance
+dtwParallel
