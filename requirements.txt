@@ -11,3 +11,4 @@ stumpy
 music21
 dtaidistance
 dtwParallel
+converter21
