@@ -5,3 +5,4 @@ librosa
 essentia
 tqdm
 pandas
+tensorflow
