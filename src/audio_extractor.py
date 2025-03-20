@@ -39,23 +39,18 @@ class AudioExtractor:
         :param output_filepath: Path to the resulting WAV
         :return: Dictionary containing extraction results (e.g. BPM, pitch).
         """
-        # 1. Load audio (in mono).
-        audio, sr = librosa.load(input_filepath, sr=None, mono=True)
+        # 1. Load audio (in mono) and resample to target_sr.
+        audio, sr = librosa.load(input_filepath, sr=self.target_sr, mono=True)
 
-        # 2. Resample to target_sr if needed.
-        if sr != self.target_sr:
-            audio = librosa.resample(audio, orig_sr=sr, target_sr=self.target_sr)
-            sr = self.target_sr
-
-        # 3. Melody Extraction
+        # 2. Melody Extraction
         pitch_values, pitch_times, pitch_confidence = (
             self.melody_extractor.extract_melody(audio, sr)
         )
 
-        # 4. Tempo Extraction
+        # 3. Tempo Extraction
         bpm, beats, beats_confidence = self.tempo_extractor.extract_tempo(audio, sr)
 
-        # 5. Sonify the pitch contour
+        # 4. Sonify the pitch contour
         sonification = mir_eval.sonify.pitch_contour(pitch_times, pitch_values, fs=sr)
         sf.write(output_filepath, sonification, sr, format="WAV")
         results = {
@@ -100,7 +95,7 @@ class AudioExtractor:
             # Extract filename and update the progress bar description
             filename = os.path.basename(file_path)
             pbar.set_description(f"Processing {filename}")
-            
+
             # Process as before
             filename_stem = os.path.splitext(os.path.basename(file_path))[0]
             out_path = os.path.join(output_folder, f"{filename_stem}_processed.wav")
