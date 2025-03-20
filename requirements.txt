@@ -12,3 +12,6 @@ music21
 dtaidistance
 dtwParallel
 converter21
+ipywidgets
+plotly
+demucs
