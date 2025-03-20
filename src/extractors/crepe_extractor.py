@@ -3,6 +3,7 @@
 import crepe
 import librosa
 import numpy as np
+import essentia.standard as es
 
 from .melody_extractor import MelodyExtractor
 
@@ -16,7 +17,7 @@ class CrepeExtractor(MelodyExtractor):
         self,
         model_capacity: str = "full",
         use_viterbi: bool = False,
-        resample_sr: int = 44100,
+        resample_sr: int = 16000,
         crepe_verbose_level: int = 1,
     ):
         self.model_capacity = model_capacity
@@ -33,6 +34,8 @@ class CrepeExtractor(MelodyExtractor):
         if sr != self.resample_sr:
             audio = librosa.resample(audio, orig_sr=sr, target_sr=self.resample_sr)
             sr = self.resample_sr
+
+        audio = self.apply_equal_loudness(audio, sr)
 
         time, frequency, confidence, activation = crepe.predict(
             audio,

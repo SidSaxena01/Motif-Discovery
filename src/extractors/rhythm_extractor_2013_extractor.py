@@ -1,4 +1,4 @@
-# tempo_extractor.py
+# rhythm_extractor_2013_extractor.py
 
 import essentia.standard as es
 import numpy as np

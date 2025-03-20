@@ -6,6 +6,7 @@ import librosa
 import mir_eval
 import soundfile as sf
 from tqdm import tqdm
+import numpy as np
 
 from extractors.melody_extractor import MelodyExtractor
 from extractors.tempo_extractor import TempoExtractor
@@ -56,23 +57,23 @@ class AudioExtractor:
         results = {
             "bpm": bpm,
             "algo": self.melody_extractor.__class__.__name__,
-            # "beats": beats.tolist() if isinstance(beats, np.ndarray) else beats,
-            # "beat_confidence": beats_confidence,
-            # "pitch_values": (
-            #     pitch_values.tolist()
-            #     if isinstance(pitch_values, np.ndarray)
-            #     else pitch_values
-            # ),
-            # "pitch_times": (
-            #     pitch_times.tolist()
-            #     if isinstance(pitch_times, np.ndarray)
-            #     else pitch_times
-            # ),
-            # "pitch_confidence": (
-            #     pitch_confidence.tolist()
-            #     if isinstance(pitch_confidence, np.ndarray)
-            #     else pitch_confidence
-            # ),
+            "beats": beats.tolist() if isinstance(beats, np.ndarray) else beats,
+            "beat_confidence": beats_confidence,
+            "pitch_values": (
+                pitch_values.tolist()
+                if isinstance(pitch_values, np.ndarray)
+                else pitch_values
+            ),
+            "pitch_times": (
+                pitch_times.tolist()
+                if isinstance(pitch_times, np.ndarray)
+                else pitch_times
+            ),
+            "pitch_confidence": (
+                pitch_confidence.tolist()
+                if isinstance(pitch_confidence, np.ndarray)
+                else pitch_confidence
+            ),
         }
         return results
 

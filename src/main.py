@@ -67,18 +67,18 @@ def main():
     melodia_extractor = MelodiaExtractor(frame_size=2048, hop_size=128, sample_rate=44100)
 
     # Option 2: Use CREPE for melody extraction (commented out for demonstration)
-    # crepe_extractor = CrepeExtractor(
-    #     model_capacity='full',
-    #     use_viterbi=True,
-    #     resample_sr=44100,
-    #     crepe_verbose_level=1
-    # )
+    crepe_extractor = CrepeExtractor(
+        model_capacity='full',
+        use_viterbi=True,
+        resample_sr=16000,
+        crepe_verbose_level=1
+    )
 
     # Create tempo extractor
     tempo_extractor = EssentiaTempoExtractor(method="multifeature")
 
     # Choose which melody extractor you want at runtime:
-    melody_extractor = melodia_extractor  # or crepe_extractor
+    melody_extractor = crepe_extractor # or melodia_extractor
 
     # Create the orchestrator
     audio_extractor = AudioExtractor(
