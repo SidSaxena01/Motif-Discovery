@@ -3,8 +3,10 @@ import pandas as pd
 import argparse
 
 from audio_extractor import AudioExtractor
+from audio_seprator import AudioSeparator
 from extractors.crepe_extractor import CrepeExtractor
 from extractors.melodia_extractor import MelodiaExtractor
+from extractors.melody_extractor import MelodyExtractor
 from extractors.rhythm_extractor_2013_extractor import EssentiaTempoExtractor
 
 
@@ -20,13 +22,13 @@ def collect_input_files(input_arg):
         for root, _, files in os.walk(input_arg):
             for f in files:
                 # Simple filter - you can add more extensions if needed
-                if f.lower().endswith(('.wav', '.flac', '.mp3', '.aac')):
+                if f.lower().endswith((".wav", ".flac", ".mp3", ".aac")):
                     file_list.append(os.path.join(root, f))
         return file_list
     else:
         # Possibly comma-separated
-        if ',' in input_arg:
-            inputs = [item.strip() for item in input_arg.split(',')]
+        if "," in input_arg:
+            inputs = [item.strip() for item in input_arg.split(",")]
         else:
             inputs = [input_arg.strip()]
         # Filter out invalid paths
@@ -37,7 +39,7 @@ def collect_input_files(input_arg):
 def main():
     parser = argparse.ArgumentParser(
         description="Motif Detection CLI",
-        usage="python main.py --input <file|file1,file2|directory> [--output <folder>]"
+        usage="python main.py --input <file|file1,file2|directory> [--output <folder>]",
     )
     parser.add_argument(
         "-i",
@@ -51,7 +53,27 @@ def main():
         default="output_folder",
         help="Path to the output directory. Defaults to 'output_folder'.",
     )
+
+    parser.add_argument(
+        "--target_stem",
+        default="none",
+        help="Stem separation to use. Options: 'vocals', 'bass', 'drums', 'other', or 'none' to bypass",
+    )
+
+    parser.add_argument(
+        "-m",
+        "--melody_extraction_method",
+        default="melodia",
+        help="melody extraction method to use. Options: 'melodia' and 'crepe'.",
+    )
     args = parser.parse_args()
+
+    # Make sure melody flag is correct
+    if args.melody_extraction_method not in ["melodia", "crepe"]:
+        raise ValueError(
+            f"{args.melody_extraction_method} is not a valid melody extraction method. \
+            Please choose between one of the following options: ['melodia', 'crepe']."
+        )
 
     # Prepare input files
     input_files = collect_input_files(args.input)
@@ -63,25 +85,31 @@ def main():
     output_folder = args.output
     os.makedirs(output_folder, exist_ok=True)
 
-    # Option 1: Use Melodia for melody extraction
-    melodia_extractor = MelodiaExtractor(frame_size=2048, hop_size=128, sample_rate=44100)
+    # Create the AudioSeparator
+    audio_separator = AudioSeparator(target_stem=args.target_stem)
 
+
+    if args.melody_extraction_method == "melodia":
+        # Option 1: Use Melodia for melody extraction
+        melody_extractor = MelodiaExtractor(
+            frame_size=2048, hop_size=128, sample_rate=44100
+        )
+
+    if args.melody_extraction_method == "crepe":
     # Option 2: Use CREPE for melody extraction (commented out for demonstration)
-    crepe_extractor = CrepeExtractor(
-        model_capacity='full',
-        use_viterbi=True,
-        resample_sr=16000,
-        crepe_verbose_level=1
-    )
+        melody_extractor = CrepeExtractor(
+            model_capacity="full",
+            use_viterbi=True,
+            resample_sr=16000,
+            crepe_verbose_level=1,
+        )
 
     # Create tempo extractor
     tempo_extractor = EssentiaTempoExtractor(method="multifeature")
 
-    # Choose which melody extractor you want at runtime:
-    melody_extractor = crepe_extractor # or melodia_extractor
-
     # Create the orchestrator
     audio_extractor = AudioExtractor(
+        audio_separator=audio_separator,
         melody_extractor=melody_extractor,
         tempo_extractor=tempo_extractor,
         target_sr=44100,
@@ -105,6 +133,7 @@ def main():
     csv_file = os.path.join(output_folder, "results.csv")
     pd.DataFrame(results).to_csv(csv_file, index=False)
     print(f"Results saved to {csv_file}")
+
 
 if __name__ == "__main__":
     main()

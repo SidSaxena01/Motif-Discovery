@@ -10,6 +10,7 @@ class MelodyExtractor(abc.ABC):
     """
     Abstract base class that defines the interface for melody extraction.
     """
+
     equal_loudness_fn = es.EqualLoudness()
 
     @abc.abstractmethod
@@ -28,5 +29,5 @@ class MelodyExtractor(abc.ABC):
         """
         Apply equal loudness to an audio signal
         """
-        self.equal_loudness_fn.configure(sampleRate = sr)
+        self.equal_loudness_fn.configure(sampleRate=sr)
         return self.equal_loudness_fn(audio)

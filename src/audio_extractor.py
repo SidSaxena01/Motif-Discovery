@@ -8,6 +8,7 @@ import soundfile as sf
 from tqdm import tqdm
 import numpy as np
 
+from audio_seprator import AudioSeparator
 from extractors.melody_extractor import MelodyExtractor
 from extractors.tempo_extractor import TempoExtractor
 
@@ -15,18 +16,21 @@ from extractors.tempo_extractor import TempoExtractor
 class AudioExtractor:
     """
     Orchestrates:
-      1) Audio loading
-      2) Melody extraction
-      3) Tempo extraction
-      4) Saving final results to WAV (44.1 kHz, mono)
+    1) Stem splitting
+    2) Audio loading
+    3) Melody extraction
+    4) Tempo extraction
+    5) Saving final results to WAV (44.1 kHz, mono)
     """
 
     def __init__(
         self,
+        audio_separator: AudioSeparator,
         melody_extractor: MelodyExtractor,
         tempo_extractor: TempoExtractor,
         target_sr: int = 44100,
     ):
+        self.audio_separator = audio_separator
         self.melody_extractor = melody_extractor
         self.tempo_extractor = tempo_extractor
         self.target_sr = target_sr
@@ -40,18 +44,22 @@ class AudioExtractor:
         :param output_filepath: Path to the resulting WAV
         :return: Dictionary containing extraction results (e.g. BPM, pitch).
         """
-        # 1. Load audio (in mono) and resample to target_sr.
-        audio, sr = librosa.load(input_filepath, sr=self.target_sr, mono=True)
 
-        # 2. Melody Extraction
+        # 1. Stem split the audio
+        demucsed_filename = self.audio_separator.process_audio(input_filepath)
+
+        # 2. Load audio (in mono) and resample to target_sr.
+        audio, sr = librosa.load(demucsed_filename, sr=self.target_sr, mono=True)
+
+        # 3. Melody Extraction
         pitch_values, pitch_times, pitch_confidence = (
             self.melody_extractor.extract_melody(audio, sr)
         )
 
-        # 3. Tempo Extraction
+        # 4. Tempo Extraction
         bpm, beats, beats_confidence = self.tempo_extractor.extract_tempo(audio, sr)
 
-        # 4. Sonify the pitch contour
+        # 5. Sonify the pitch contour
         sonification = mir_eval.sonify.pitch_contour(pitch_times, pitch_values, fs=sr)
         sf.write(output_filepath, sonification, sr, format="WAV")
         results = {
@@ -88,6 +96,7 @@ class AudioExtractor:
         :return: List of result dictionaries
         """
         import os
+
         results_list = []
 
         # Create the progress bar without a specific description initially
