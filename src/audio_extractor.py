@@ -57,8 +57,8 @@ class AudioExtractor:
         results = {
             "bpm": bpm,
             "algo": self.melody_extractor.__class__.__name__,
-            "beats": beats.tolist() if isinstance(beats, np.ndarray) else beats,
-            "beat_confidence": beats_confidence,
+            # "beats": beats.tolist() if isinstance(beats, np.ndarray) else beats,
+            # "beat_confidence": beats_confidence,
             "pitch_values": (
                 pitch_values.tolist()
                 if isinstance(pitch_values, np.ndarray)
