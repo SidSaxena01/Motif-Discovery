@@ -3,7 +3,7 @@ import pandas as pd
 import argparse
 
 from audio_extractor import AudioExtractor
-from audio_seprator import AudioSeparator
+from audio_separator import AudioSeparator
 from extractors.crepe_extractor import CrepeExtractor
 from extractors.melodia_extractor import MelodiaExtractor
 from extractors.melody_extractor import MelodyExtractor
