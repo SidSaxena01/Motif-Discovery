@@ -6,8 +6,10 @@ import numpy as np
 import pandas as pd
 import stumpy
 from dtaidistance import dtw
+from dtwParallel import dtw_functions
 from matplotlib.patches import Rectangle
 from music21 import chord, converter, note
+from scipy.spatial import distance as d
 
 
 def extract_notes_with_duration(score):
@@ -139,14 +141,67 @@ def detect_motif_stump(audio_array, m):
 
 def detect_motif_dtw(motif_array, audio_array):
     """
-    Simple DTW detection:
-    We do a direct dtw.distance between motif_array and audio_array,
-    but this alone won't locate the best index in the audio_array.
-    Usually you'd window over audio_array in segments.
-    For demonstration, we just return the distance for them as entire sequences.
+    Perform DTW on the entire motif_array vs. the entire audio_array,
+    then plot the distance matrix, warping path, and raw pitch contours.
+
+    Parameters
+    ----------
+    motif_array : np.ndarray
+        1D pitch contour (float) for the motif (same sample rate as audio_array).
+    audio_array : np.ndarray
+        1D pitch contour (float) for the audio track.
+
+    Returns
+    -------
+    dtw_distance : float
+        The final DTW cost (distance) between the motif and the audio.
     """
-    dist = dtw.distance(motif_array, audio_array)
-    return dist
+    # Optionally do a log transform or z-normalization to reduce range differences:
+    # Here we do a simple log transform so that large pitch differences are less penalized
+    motif_dtw = np.log1p(motif_array)
+    audio_dtw = np.log1p(audio_array)
+
+    # Run parallel DTW with dtwParallel's dtw_functions
+    dtw_result = dtw_functions.dtw(
+        audio_dtw.tolist(),
+        motif_dtw.tolist(),
+        local_dissimilarity=d.euclidean,
+        get_visualization=True,  # So we get a distance matrix for plotting
+    )
+
+    dtw_distance = dtw_result["dtw_value"]
+    warping_path = dtw_result["path"]  # List of (audio_index, motif_index)
+    distance_matrix = dtw_result["visualization_data"]
+
+    # --- Plotting the DTW matrix + path, and raw pitch contours ---
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+    # (1) Distance matrix
+    ax1 = axes[0]
+    im = ax1.imshow(distance_matrix, origin="lower", aspect="auto", cmap="viridis")
+    ax1.set_title(f"DTW Distance Matrix\nDistance = {dtw_distance:.2f}")
+    ax1.set_xlabel("Motif frames")
+    ax1.set_ylabel("Audio frames")
+    fig.colorbar(im, ax=ax1, fraction=0.04)
+
+    # Plot warping path in red
+    path_x = [p[1] for p in warping_path]  # motif indices
+    path_y = [p[0] for p in warping_path]  # audio indices
+    ax1.plot(path_x, path_y, "r-")
+
+    # (2) Raw pitch contours (un-aligned)
+    ax2 = axes[1]
+    ax2.plot(audio_array, label="Audio pitch", alpha=0.7)
+    ax2.plot(motif_array, label="Motif pitch", alpha=0.7)
+    ax2.set_title("Raw Pitch Contours")
+    ax2.set_xlabel("Frames (same SR)")
+    ax2.set_ylabel("Hz (or relative scale)")
+    ax2.legend()
+
+    plt.tight_layout()
+    plt.show()
+
+    return dtw_distance
 
 
 def detect_motif_in_track(
@@ -179,11 +234,12 @@ def detect_motif_in_track(
     -------
     results : dict
         Various fields depending on the method chosen, typically including:
-        - "indices": list or array of match indices
-        - "distances": list or array of distances
-        - "pitch_array": the pitch extracted from audio
-        - "pitch_times": times array for the audio pitch
-        - etc.
+        - "best_idx", "best_dist", "dist_profile" (for 'mass')
+        - "matches" (for 'match')
+        - "mp", "motif_idx" (for 'stump')
+        - "dtw_distance" (for 'dtw')
+        - "audio_pitch", "audio_pitch_times" (common)
+        - "motif_pitch", "motif_times" (common)
     """
     # --- 1) Parse the score
     score = converter.parse(score_file)
@@ -193,7 +249,7 @@ def detect_motif_in_track(
     # --- 2) Extract pitch from the audio
     audio_pitch, audio_pitch_times, _ = extract_pitch_essentia(audio_file)
 
-    # --- 3) Create a motif array from the score data
+    # --- 3) Create a motif array from the score data at the same "time resolution" as the audio
     motif_array, motif_times = resample_motif_to_audio_times(
         notes_df, audio_pitch_times, bpm
     )
@@ -230,6 +286,7 @@ def detect_motif_in_track(
         results.update({"mp": mp, "motif_idx": motif_idx})
 
     elif method == "dtw":
+        # --- Updated: Now calls the new 'detect_motif_dtw' with plotting ---
         dtw_dist = detect_motif_dtw(motif_array, audio_pitch)
         results["dtw_distance"] = dtw_dist
 
@@ -656,7 +713,7 @@ def plot_star_wars_motif_matches(
     print(f"Figure saved to: {save_path}")
 
 
-if __name__ == "__main__":
+def main():
     # fmt: off
     # Example usage
     audio_file = "/Users/fernando/Downloads/Archive/separated/02 - Main Title-Rebel Blockade Runner_processed.wav"
@@ -732,3 +789,22 @@ if __name__ == "__main__":
         out_filename="star_wars_motif_matches.png",
         show=True,
     )
+
+
+def test_dtw():
+    # Example usage
+    audio_file = "/Users/fernando/Downloads/Archive/separated/02 - Main Title-Rebel Blockade Runner_processed.wav"
+    score_file = "/Users/fernando/Downloads/Archive/Xmls/1a_Main_Theme_Basic_(A_Section).musicxml"
+    bpm_estimate = 145.0  # Could come from Essentia's RhythmExtractor
+
+    # 4) DTW distance between motif array and entire audio pitch array
+    dtw_results = detect_motif_in_track(
+        audio_file, score_file, bpm_estimate, method="dtw"
+    )
+    print("DTW distance between motif and entire track:", dtw_results["dtw_distance"])
+
+    plot_motif_detection_results(results=dtw_results, method="dtw")
+
+
+if __name__ == "__main__":
+    test_dtw()
