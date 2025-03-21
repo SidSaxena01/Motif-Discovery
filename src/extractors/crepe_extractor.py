@@ -1,9 +1,9 @@
 # crepe_extractor.py
 
 import crepe
+import essentia.standard as es
 import librosa
 import numpy as np
-import essentia.standard as es
 
 from .melody_extractor import MelodyExtractor
 

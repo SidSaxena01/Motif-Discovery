@@ -1,6 +1,7 @@
-import os
-import pandas as pd
 import argparse
+import os
+
+import pandas as pd
 
 from audio_extractor import AudioExtractor
 from audio_separator import AudioSeparator
@@ -88,7 +89,6 @@ def main():
     # Create the AudioSeparator
     audio_separator = AudioSeparator(target_stem=args.target_stem)
 
-
     if args.melody_extraction_method == "melodia":
         # Option 1: Use Melodia for melody extraction
         melody_extractor = MelodiaExtractor(
@@ -96,7 +96,7 @@ def main():
         )
 
     if args.melody_extraction_method == "crepe":
-    # Option 2: Use CREPE for melody extraction (commented out for demonstration)
+        # Option 2: Use CREPE for melody extraction (commented out for demonstration)
         melody_extractor = CrepeExtractor(
             model_capacity="full",
             use_viterbi=True,

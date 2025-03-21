@@ -1,26 +1,13 @@
+import itertools
 import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import stumpy
 from dtaidistance import dtw
-from music21 import chord, converter, harmony, note
-
-
-def extract_midi_notes(score):
-    """
-    Extracts MIDI notes from a music21 score (flattened).
-    Ignores chord symbols. Collects pitches of chords if found.
-    """
-    midi_list = []
-    for el in score.flatten().notes:
-        if isinstance(el, note.Note):
-            midi_list.append(el.pitch.midi)
-        elif isinstance(el, chord.Chord):
-            for p in el.pitches:
-                midi_list.append(p.midi)
-        # ignoring harmony.ChordSymbol, etc.
-    return midi_list
+from matplotlib.patches import Rectangle
+from music21 import chord, converter, note
 
 
 def extract_notes_with_duration(score):
@@ -112,9 +99,6 @@ def extract_pitch_essentia(audio_file):
     return pitch_array, pitch_times, sr
 
 
-# Optional: You could also have a separate "extract_pitch_crepe" if you prefer CREPE
-
-
 def detect_motif_mass(motif_array, audio_array):
     """
     Single-query motif detection using stumpy.mass
@@ -134,6 +118,8 @@ def detect_motif_match(motif_array, audio_array, top_k=5):
     Returns an array of shape (k, 2) with [index, distance].
     """
     matches = stumpy.match(motif_array, audio_array, max_matches=top_k)
+    match_indices = matches[:, 0].astype(int)
+    match_distances = matches[:, 1]
     # matches[:, 0] -> indices, matches[:, 1] -> distances
     return matches
 
@@ -260,11 +246,11 @@ def plot_motif_detection_results(
     method: str,
     out_folder: str = "figures",
     fig_prefix: str = "motif_detection",
-    show_plot: bool = True
+    show_plot: bool = True,
 ):
     """
     Plots and saves a figure showing the motif detection result for a given method.
-    
+
     Parameters
     ----------
     results : dict
@@ -291,16 +277,16 @@ def plot_motif_detection_results(
     # Ensure output folder exists
     if not os.path.exists(out_folder):
         os.makedirs(out_folder)
-    
+
     audio_pitch = results["audio_pitch"]
     audio_times = results["audio_pitch_times"]
-    motif_pitch = results["motif_pitch"]     # the motif pitch array used
+    motif_pitch = results["motif_pitch"]  # the motif pitch array used
     # motif_times = results["motif_times"]   # not always needed visually
 
     plt.figure(figsize=(12, 6))
 
     # Plot the main pitch contour
-    plt.plot(audio_times, audio_pitch, label="Audio Pitch", color='gray', alpha=0.6)
+    plt.plot(audio_times, audio_pitch, label="Audio Pitch", color="gray", alpha=0.6)
     plt.title(f"Motif Detection via {method.upper()}", fontsize=14)
     plt.xlabel("Time (s)")
     plt.ylabel("Frequency (Hz)")
@@ -315,11 +301,16 @@ def plot_motif_detection_results(
         # Compute match endpoints
         motif_length = len(motif_pitch)
         end_idx = min(best_idx + motif_length, len(audio_pitch))
-        
+
         # Highlight the match
         match_times = audio_times[best_idx:end_idx]
         match_pitch = audio_pitch[best_idx:end_idx]
-        plt.plot(match_times, match_pitch, label=f"Best match (dist={best_dist:.2f})", linewidth=2)
+        plt.plot(
+            match_times,
+            match_pitch,
+            label=f"Best match (dist={best_dist:.2f})",
+            linewidth=2,
+        )
 
         # (Optional) Add a second subplot for the distance profile
         fig = plt.gcf()
@@ -328,7 +319,7 @@ def plot_motif_detection_results(
         # Create an inset or second axis
         ax_dist = fig.add_axes([0.65, 0.55, 0.25, 0.3])  # x, y, width, height in [0..1]
         ax_dist.set_title("Distance Profile")
-        ax_dist.plot(dist_profile, color='orange')
+        ax_dist.plot(dist_profile, color="orange")
         ax_dist.set_xlabel("Index")
         ax_dist.set_ylabel("Distance")
 
@@ -345,12 +336,17 @@ def plot_motif_detection_results(
             match_pitch = audio_pitch[idx:end_idx]
 
             # Use a different color each time, but a simple approach is cycle from the colormap
-            plt.plot(match_times, match_pitch, linewidth=2, label=f"Match {i+1} (dist={dist:.2f})")
+            plt.plot(
+                match_times,
+                match_pitch,
+                linewidth=2,
+                label=f"Match {i+1} (dist={dist:.2f})",
+            )
 
     elif method == "stump":
         # We expect "mp" (the matrix profile) and "motif_idx" in results
         mp = results["mp"]
-        motif_idx = results["motif_idx"]   # location of the discovered motif
+        motif_idx = results["motif_idx"]  # location of the discovered motif
         motif_length = len(motif_pitch)
 
         # Highlight the discovered motif
@@ -373,10 +369,11 @@ def plot_motif_detection_results(
         # We expect "dtw_distance" in results
         dtw_distance = results["dtw_distance"]
         plt.text(
-            0.05, 0.9,
+            0.05,
+            0.9,
             f"DTW Distance: {dtw_distance:.2f}",
             transform=plt.gca().transAxes,
-            bbox=dict(facecolor='white', alpha=0.7)
+            bbox=dict(facecolor="white", alpha=0.7),
         )
         # For a direct DTW over entire arrays, we don’t necessarily have an index
         # unless you do a "sliding" approach. So we just annotate the distance.
@@ -384,13 +381,14 @@ def plot_motif_detection_results(
     plt.legend(loc="upper right")
     save_path = os.path.join(out_folder, f"{fig_prefix}_{method}.png")
     plt.savefig(save_path, dpi=150)
-    
+
     if show_plot:
         plt.show()
     else:
         plt.close()
-    
+
     print(f"[{method.upper()}] Figure saved to: {save_path}")
+
 
 def plot_all_methods_combined(
     mass_results: dict,
@@ -399,7 +397,7 @@ def plot_all_methods_combined(
     dtw_results: dict,
     out_folder: str = "figures",
     fig_name: str = "motif_detection_all_methods.png",
-    show_plot: bool = True
+    show_plot: bool = True,
 ):
     """
     Creates a multi-subplot figure showing each method's detection result side-by-side.
@@ -407,7 +405,7 @@ def plot_all_methods_combined(
     """
     if not os.path.exists(out_folder):
         os.makedirs(out_folder)
-        
+
     fig, axs = plt.subplots(2, 2, figsize=(14, 10))  # 2x2 grid
     # Flatten axes for easy indexing
     ax_list = axs.ravel()
@@ -419,13 +417,17 @@ def plot_all_methods_combined(
 
     # ---- 1) MASS subplot
     ax = ax_list[0]
-    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color='gray', alpha=0.6)
+    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color="gray", alpha=0.6)
     best_idx = mass_results["best_idx"]
     best_dist = mass_results["best_dist"]
     motif_length = len(mass_results["motif_pitch"])
     end_idx = min(best_idx + motif_length, len(audio_pitch))
-    ax.plot(audio_times[best_idx:end_idx], audio_pitch[best_idx:end_idx],
-            label=f"Match (dist={best_dist:.2f})", linewidth=2)
+    ax.plot(
+        audio_times[best_idx:end_idx],
+        audio_pitch[best_idx:end_idx],
+        label=f"Match (dist={best_dist:.2f})",
+        linewidth=2,
+    )
     ax.set_title("MASS")
     ax.set_xlabel("Time (s)")
     ax.set_ylabel("Frequency (Hz)")
@@ -434,12 +436,16 @@ def plot_all_methods_combined(
 
     # ---- 2) MATCH subplot
     ax = ax_list[1]
-    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color='gray', alpha=0.6)
+    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color="gray", alpha=0.6)
     for i, (idx, dist) in enumerate(match_results["matches"]):
         idx = int(idx)
         end_idx = min(idx + motif_length, len(audio_pitch))
-        ax.plot(audio_times[idx:end_idx], audio_pitch[idx:end_idx],
-                linewidth=2, label=f"Match {i+1} (d={dist:.2f})")
+        ax.plot(
+            audio_times[idx:end_idx],
+            audio_pitch[idx:end_idx],
+            linewidth=2,
+            label=f"Match {i+1} (d={dist:.2f})",
+        )
     ax.set_title("MATCH (top-k)")
     ax.set_xlabel("Time (s)")
     ax.set_ylabel("Frequency (Hz)")
@@ -448,12 +454,16 @@ def plot_all_methods_combined(
 
     # ---- 3) STUMP subplot
     ax = ax_list[2]
-    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color='gray', alpha=0.6)
+    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color="gray", alpha=0.6)
     stump_mp = stump_results["mp"]
     stump_motif_idx = stump_results["motif_idx"]
     end_idx = min(stump_motif_idx + motif_length, len(audio_pitch))
-    ax.plot(audio_times[stump_motif_idx:end_idx], audio_pitch[stump_motif_idx:end_idx],
-            linewidth=3, label="Discovered Motif")
+    ax.plot(
+        audio_times[stump_motif_idx:end_idx],
+        audio_pitch[stump_motif_idx:end_idx],
+        linewidth=3,
+        label="Discovered Motif",
+    )
     ax.set_title("STUMP (Matrix Profile)")
     ax.set_xlabel("Time (s)")
     ax.set_ylabel("Frequency (Hz)")
@@ -462,13 +472,14 @@ def plot_all_methods_combined(
 
     # ---- 4) DTW subplot
     ax = ax_list[3]
-    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color='gray', alpha=0.6)
+    ax.plot(audio_times, audio_pitch, label="Audio Pitch", color="gray", alpha=0.6)
     dtw_distance = dtw_results["dtw_distance"]
     ax.text(
-        0.03, 0.87,
+        0.03,
+        0.87,
         f"DTW Distance: {dtw_distance:.2f}",
         transform=ax.transAxes,
-        bbox=dict(facecolor='white', alpha=0.7)
+        bbox=dict(facecolor="white", alpha=0.7),
     )
     ax.set_title("DTW")
     ax.set_xlabel("Time (s)")
@@ -489,25 +500,161 @@ def plot_all_methods_combined(
     print(f"Combined figure saved to: {out_path}")
 
 
-def plot_motif_with_waveform(audio_samples, sr, pitch_times, pitch_array):
-    # Suppose you want two subplots: top is waveform, bottom is pitch
-    duration = len(audio_samples) / sr
-    time_array = np.linspace(0, duration, len(audio_samples))
-    
-    fig, (ax_wave, ax_pitch) = plt.subplots(2, 1, figsize=(12,8), sharex=True)
+def plot_star_wars_motif_matches(
+    pitch_array,
+    pitch_times,
+    match_indices,
+    match_distances,
+    motif_length,
+    top_k=5,
+    out_folder="figures",
+    out_filename="star_wars_motif_matches.png",
+    show=True,
+):
+    """
+    Plot the Star Wars pitch contour along with up to 'top_k' motif matches.
+    Mimics the logic from your reference cell, including background shading
+    every 10 seconds, vertical lines for the first matches, and a summary printout.
 
-    ax_wave.plot(time_array, audio_samples, color="lightblue")
-    ax_wave.set_ylabel("Amplitude")
-    ax_wave.set_title("Waveform")
+    Parameters
+    ----------
+    pitch_array : 1D array-like
+        The pitch contour of the main Star Wars theme (e.g. sw_pitch).
+    pitch_times : 1D array-like
+        Corresponding time (in seconds) for each frame in 'pitch_array' (e.g. sw_pitch_times).
+    match_indices : list or 1D array of int
+        Starting indices in 'pitch_array' for each discovered match.
+    match_distances : list or 1D array of float
+        Distances for each match, same length as match_indices.
+    motif_length : int
+        Number of frames for the motif. This is used to highlight each matched region.
+    top_k : int
+        How many matches to highlight/label. If there are fewer matches than top_k,
+        it will just show them all.
+    out_folder : str
+        Folder to which the figure will be saved. Created if it doesn't exist.
+    out_filename : str
+        Filename of the saved figure (e.g. "star_wars_motif_matches.png").
+    show : bool
+        If True, display the plot. If False, just save and close it.
+    """
+    # Ensure output folder exists
+    if not os.path.exists(out_folder):
+        os.makedirs(out_folder)
 
-    ax_pitch.plot(pitch_times, pitch_array, color="gray")
-    ax_pitch.set_ylabel("Frequency (Hz)")
-    ax_pitch.set_xlabel("Time (s)")
-    ax_pitch.set_title("Pitch Contour")
+    # Set up the figure
+    plt.figure(figsize=(12, 6))
+
+    # Plot the pitch contour
+    plt.plot(pitch_times, pitch_array, linewidth=1, color="black", alpha=0.5)
+    plt.title("Star Wars Main Theme - Motif Matches", fontsize=20)
+    plt.xlabel("Time (s)", fontsize=15)
+    plt.ylabel("Frequency (Hz)", fontsize=15)
+    plt.grid(True, alpha=0.3)
+
+    # Compute pitch/time bounds for shading
+    min_time = np.min(pitch_times)
+    max_time = np.max(pitch_times)
+    pitch_min = np.min(pitch_array)
+    pitch_max = np.max(pitch_array)
+    height = pitch_max - pitch_min
+
+    # Convert top_k to the actual number of matches we can plot
+    n_matches = min(top_k, len(match_indices))
+
+    # Plot each match
+    for i in range(n_matches):
+        idx = match_indices[i]
+        dist = match_distances[i]
+        end_idx = min(idx + motif_length, len(pitch_array))
+
+        # Extract portion of the pitch/time arrays for this match
+        match_times = pitch_times[idx:end_idx]
+        match_pitch = pitch_array[idx:end_idx]
+
+        # Plot with a thicker line and a label showing the match index and start time
+        start_time = match_times[0]
+        end_time = match_times[-1] if len(match_times) > 0 else start_time
+
+        plt.plot(
+            match_times,
+            match_pitch,
+            linewidth=2,
+            label=f"Match {i+1}: {start_time:.2f}s (dist={dist:.4f})",
+        )
+
+        # Mark the very start of the match with a dot
+        if len(match_times) > 0:
+            plt.plot(match_times[0], match_pitch[0], "o", markersize=5)
+
+        # Add vertical lines for the first few matches (like your code did for i < 5)
+        if i < 5:
+            plt.axvline(x=start_time, color=f"C{i+1}", linestyle="--", alpha=0.5)
+            plt.axvline(x=end_time, color=f"C{i+1}", linestyle="--", alpha=0.5)
+            # Stagger the text label
+            y_offset = pitch_min + (i * height / 10.0)
+            plt.text(
+                start_time,
+                y_offset,
+                f"{start_time:.2f}s",
+                rotation=90,
+                fontsize=8,
+                va="bottom",
+                ha="right",
+            )
+            plt.text(
+                end_time,
+                y_offset,
+                f"{end_time:.2f}s",
+                rotation=90,
+                fontsize=8,
+                va="bottom",
+                ha="left",
+            )
+
+    # Add a legend (for the lines we plotted)
+    if n_matches > 0:
+        plt.legend(loc="upper right", fontsize=8, ncol=2, bbox_to_anchor=(1.15, 1))
+
+    # Background shading every 10 seconds, as in your snippet
+    color_cycle = itertools.cycle(["white", "gainsboro"])
+    # We'll iterate from int(min_time) to int(max_time) stepping by 10
+    for t in range(int(min_time), int(max_time), 10):
+        # x, y, width, height
+        rect = Rectangle(
+            (t, pitch_min), 10, height, facecolor=next(color_cycle), alpha=0.3
+        )
+        plt.gca().add_patch(rect)
 
     plt.tight_layout()
-    plt.savefig("figures/mywaveform_plot.png", dpi=150)
-    plt.show()
+
+    # Print a summary of the top_k matches
+    print(f"Top {n_matches} matches (out of {len(match_indices)} found):")
+    for i in range(n_matches):
+        idx = match_indices[i]
+        dist = match_distances[i]
+        end_idx = min(idx + motif_length, len(pitch_array))
+        start_time = pitch_times[idx]
+        end_time = (
+            pitch_times[end_idx - 1] if end_idx < len(pitch_times) else pitch_times[-1]
+        )
+        duration = end_time - start_time
+        print(
+            f"  Match {i+1}: {start_time:.2f}s to {end_time:.2f}s (duration={duration:.2f}s) | distance={dist:.4f}"
+        )
+
+    # Save the figure
+    save_path = os.path.join(out_folder, out_filename)
+    plt.savefig(save_path, dpi=150)
+
+    # Show or close
+    if show:
+        plt.show()
+    else:
+        plt.close()
+
+    print(f"Figure saved to: {save_path}")
+
 
 if __name__ == "__main__":
     # fmt: off
@@ -521,22 +668,67 @@ if __name__ == "__main__":
     print("Mass method best match index:", mass_results["best_idx"])
     print("Mass method best distance:", mass_results["best_dist"])
 
-    # 2) Multiple matches with 'match'
-    match_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="match", top_k=5)
-    print("Match top results:\n", match_results["matches"])
+    # # 2) Multiple matches with 'match'
+    # match_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="match", top_k=5)
+    # print("Match top results:\n", match_results["matches"])
 
-    # 3) Full matrix profile (self-join) with 'stump'
-    stump_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="stump", window_size=2048)
-    print("Stump motif index (lowest MP value):", stump_results["motif_idx"])
+    # # 3) Full matrix profile (self-join) with 'stump'
+    # stump_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="stump", window_size=2048)
+    # print("Stump motif index (lowest MP value):", stump_results["motif_idx"])
 
-    # 4) DTW distance between motif array and entire audio pitch array
-    dtw_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="dtw")
-    print("DTW distance between motif and entire track:", dtw_results["dtw_distance"])
+    # # 4) DTW distance between motif array and entire audio pitch array
+    # dtw_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="dtw")
+    # print("DTW distance between motif and entire track:", dtw_results["dtw_distance"])
 
-    plot_motif_detection_results(results=mass_results, method="mass")
-    plot_motif_detection_results(results=match_results, method="match")
-    plot_motif_detection_results(results=stump_results, method="stump")
-    plot_motif_detection_results(results=dtw_results, method="dtw")
+    # plot_motif_detection_results(results=mass_results, method="mass")
+    # plot_motif_detection_results(results=match_results, method="match")
+    # plot_motif_detection_results(results=stump_results, method="stump")
+    # plot_motif_detection_results(results=dtw_results, method="dtw")
 
-    plot_all_methods_combined(mass_results, match_results, stump_results, dtw_results)
+    # plot_all_methods_combined(mass_results, match_results, stump_results, dtw_results)
     # fmt: on
+
+    # results = {
+    #     "method": method,
+    #     "audio_pitch": audio_pitch,
+    #     "audio_pitch_times": audio_pitch_times,
+    #     "motif_pitch": motif_array,
+    #     "motif_times": motif_times,
+    # }
+
+    # 2) Extract the needed arrays from mass_results
+    sw_pitch = mass_results["audio_pitch"]
+    sw_pitch_times = mass_results["audio_pitch_times"]
+    distance_profile = mass_results["dist_profile"]  # for the motif vs. audio
+    motif_hz_resampled_array = mass_results["motif_pitch"]
+    motif_length = len(motif_hz_resampled_array)
+
+    # 3) Find the top matches (exclusion zone approach)
+    k = 10
+    exclusion_zone = motif_length // 2  # half the motif length
+    working_distances = distance_profile.copy()
+
+    match_indices = []
+    match_distances = []
+
+    for i in range(k):
+        idx = np.argmin(working_distances)
+        match_indices.append(idx)
+        match_distances.append(distance_profile[idx])
+
+        exclusion_start = max(0, idx - exclusion_zone)
+        exclusion_end = min(len(working_distances), idx + exclusion_zone)
+        working_distances[exclusion_start:exclusion_end] = np.inf
+
+    # 4) Finally, call your special plotting function
+    plot_star_wars_motif_matches(
+        pitch_array=sw_pitch,
+        pitch_times=sw_pitch_times,
+        match_indices=match_indices,
+        match_distances=match_distances,
+        motif_length=motif_length,
+        top_k=k,  # or whatever number of top matches to highlight
+        out_folder="figures",
+        out_filename="star_wars_motif_matches.png",
+        show=True,
+    )

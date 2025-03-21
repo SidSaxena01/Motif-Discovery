@@ -2,8 +2,8 @@
 
 import abc
 
-import numpy as np
 import essentia.standard as es
+import numpy as np
 
 
 class MelodyExtractor(abc.ABC):

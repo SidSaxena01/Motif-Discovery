@@ -1,7 +1,8 @@
 # audio_separator.py
 
-import demucs.separate
 from pathlib import Path
+
+import demucs.separate
 
 
 class AudioSeparator:

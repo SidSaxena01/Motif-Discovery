@@ -4,9 +4,9 @@ from typing import List
 
 import librosa
 import mir_eval
+import numpy as np
 import soundfile as sf
 from tqdm import tqdm
-import numpy as np
 
 from audio_separator import AudioSeparator
 from extractors.melody_extractor import MelodyExtractor
