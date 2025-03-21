@@ -17,7 +17,7 @@ class AudioSeparator:
     def separate_audio(self, file_path: Path) -> Path:
         """Runs Demucs to separate audio if the expected output does not already exist."""
         cleaned_filename = file_path.stem
-        output_directory = Path(f"separated/htdemucs/{cleaned_filename}/")
+        output_directory = Path(f"separated/htdemucs_ft/{cleaned_filename}/")
 
         # Define the path for the target output file
         target_file = output_directory / f"{self.target_stem}.mp3"
@@ -28,7 +28,7 @@ class AudioSeparator:
             return output_directory  # Return the output directory directly
 
         # Run Demucs to separate audio
-        demucs.separate.main(["--mp3", "-n", "htdemucs", str(file_path)])
+        demucs.separate.main(["--mp3", "-n", "htdemucs_ft", str(file_path)])
 
         return output_directory
 
