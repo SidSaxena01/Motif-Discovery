@@ -23,8 +23,13 @@ def process_audio_file(
     }
 
 
-def main(show_missing_data=False):
-    motif_mapping = load_mapping_file(JSON_MAPPING_FILE)
+def processing_pipeline(
+    show_missing_data=False,
+    json_mapping_file: str = JSON_MAPPING_FILE,
+    output_folder: str = "output_folder",
+    output_csv: str = "processing_pipeline_results.csv",
+):
+    motif_mapping = load_mapping_file(json_mapping_file)
 
     results = []
     skiped_tracks = []
@@ -49,10 +54,10 @@ def main(show_missing_data=False):
             )
             results.append(result)
 
-    pd.DataFrame(results).to_csv("results.csv", index=False)
-    print(f"{len(results)} results saved to results.csv")
+    pd.DataFrame(results).to_csv(output_csv, index=False)
+    print(f"{len(results)} results saved to {output_csv}")
     print(f"{len(skiped_tracks)} tracks were skipped due to missing data.")
 
 
 if __name__ == "__main__":
-    main()
+    processing_pipeline()
