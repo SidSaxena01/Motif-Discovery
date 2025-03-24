@@ -725,33 +725,25 @@ def main():
     print("Mass method best match index:", mass_results["best_idx"])
     print("Mass method best distance:", mass_results["best_dist"])
 
-    # # 2) Multiple matches with 'match'
-    # match_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="match", top_k=5)
-    # print("Match top results:\n", match_results["matches"])
+    # 2) Multiple matches with 'match'
+    match_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="match", top_k=5)
+    print("Match top results:\n", match_results["matches"])
 
-    # # 3) Full matrix profile (self-join) with 'stump'
-    # stump_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="stump", window_size=2048)
-    # print("Stump motif index (lowest MP value):", stump_results["motif_idx"])
+    # 3) Full matrix profile (self-join) with 'stump'
+    stump_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="stump", window_size=2048)
+    print("Stump motif index (lowest MP value):", stump_results["motif_idx"])
 
-    # # 4) DTW distance between motif array and entire audio pitch array
+    # 4) DTW distance between motif array and entire audio pitch array
     # dtw_results = detect_motif_in_track(audio_file, score_file, bpm_estimate, method="dtw")
     # print("DTW distance between motif and entire track:", dtw_results["dtw_distance"])
 
-    # plot_motif_detection_results(results=mass_results, method="mass")
-    # plot_motif_detection_results(results=match_results, method="match")
-    # plot_motif_detection_results(results=stump_results, method="stump")
+    plot_motif_detection_results(results=mass_results, method="mass")
+    plot_motif_detection_results(results=match_results, method="match")
+    plot_motif_detection_results(results=stump_results, method="stump")
     # plot_motif_detection_results(results=dtw_results, method="dtw")
 
     # plot_all_methods_combined(mass_results, match_results, stump_results, dtw_results)
     # fmt: on
-
-    # results = {
-    #     "method": method,
-    #     "audio_pitch": audio_pitch,
-    #     "audio_pitch_times": audio_pitch_times,
-    #     "motif_pitch": motif_array,
-    #     "motif_times": motif_times,
-    # }
 
     # 2) Extract the needed arrays from mass_results
     sw_pitch = mass_results["audio_pitch"]
@@ -807,4 +799,4 @@ def test_dtw():
 
 
 if __name__ == "__main__":
-    test_dtw()
+    main()
