@@ -40,7 +40,7 @@ fernando.garcia11@estudiant.upf.edu}
 
 \begin{abstract}
 This project addresses the challenge of automatically detecting recurring musical motifs in film soundtracks by focusing on the Star Wars dataset. Our dual strategy begins with the extraction of melody information from audio recordings using two contrasting techniques: the CREPE deep-learning model and the signal processing-based Melodia algorithm. We then align these audio features with symbolic thematic data from XML files parsed via \texttt{music21}. For motif detection, we experiment with the stumpy matrix profile method—which offers fast candidate discovery—and Dynamic Time Warping (DTW), which, although computationally heavier, provides precise temporal alignments. Early findings indicate that while stumpy achieves acceptable accuracy with better speed, DTW’s detailed alignments come at a significant computational cost. We further explore motif comparisons across different audio tracks to identify recurrent patterns. Although challenges remain (such as data synchronization between noisy audio and cleaner symbolic data, and hyper-parameter tuning), our hybrid approach demonstrates promise for advancing musical pattern discovery in orchestral soundtracks.
-More details about the code can be found in our GitHub repository\footnote{\url{https://github.com/SidSaxena01/Motif-Discovery}}.
+More details about the code can be found in our GitHub repository\footnote{\url{https://github.com/SidSaxena01/Motif-Discovery}\label{foot:catalogue}}.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -68,7 +68,7 @@ The report is organized as follows. Section II reviews related work and datasets
 
 Previous studies have utilized both signal processing and deep learning approaches for motif detection. The matrix profile method has been successfully applied in exemplar works (e.g., Nuttall et al., 2023) for discovering repeated segments in time series data. Alternative methods—such as techniques replacing DTW with string matching (Ganguli et al., 2017)—demonstrate the value of symbolic abstraction in reducing computational complexity. More recent approaches have involved deep learning (Krause et al., 2021) to detect leitmotif activities. Our work builds on these foundations by applying these methods to film soundtracks and addressing data synchronization challenges.
 
-The Star Wars thematic corpus\footnote{\href{https://github.com/Computational-Cognitive-Musicology-Lab/Star-Wars-Thematic-Corpus/}{Star Wars thematic corpus GitHub}} includes multiple themes available in symbolic formats (XML, Humdrum) along with time-stamped motif occurrences. In the broader MIR community, annotated datasets for orchestral music are limited, making motif annotation and detection an open challenge. This project not only validates motif detection techniques on a complex dataset but also contributes to improved annotation strategies.
+The Star Wars thematic corpus\footnote{\url{https://github.com/Computational-Cognitive-Musicology-Lab/Star-Wars-Thematic-Corpus/}} includes multiple themes available in symbolic formats (XML, Humdrum) along with time-stamped motif occurrences. In the broader MIR community, annotated datasets for orchestral music are limited, making motif annotation and detection an open challenge. This project not only validates motif detection techniques on a complex dataset but also contributes to improved annotation strategies.
 
 \section{Methodology}
 
@@ -87,7 +87,7 @@ Prior to melody extraction, audio tracks were decomposed into distinct stems usi
 \subsection{Data Sources and Preprocessing}
 Our system leverages two complementary data sources:
 \begin{itemize}
-    \item \textbf{Symbolic Data:} MusicXML files are parsed using \texttt{music21} to extract thematic elements such as motifs and phrases. The resulting note sequences are transformed into time-aligned arrays, with interpolation strategies ensuring precise synchronization with audio-derived features.
+    \item \textbf{Symbolic Data:} MusicXML files are parsed using \texttt{music21} to extract thematic elements such as motifs and phrases. The resulting note sequences are transformed into time-aligned arrays, with interpolation strategies ensuring precise synchronization with audio-derived features, such as the tempo.
     \item \textbf{Audio Data:} Raw audio files (WAV format) are processed to extract pitch contours. Preprocessing of audio includes normalization and resampling to 16~kHz, as required by the CREPE framework.
 \end{itemize}
 
@@ -156,17 +156,12 @@ A detailed flowchart of the pipeline is maintained in the project documentation.
 \section{Experimental Results and Analysis}
 
 \subsection{Performance of Melody Extraction}
-Initial experiments reveal that CREPE is robust in polyphonic contexts due to its deep-learning basis, while Melodia provides clearer pitch contours in cleaner segments. Given the computational advantages, Melodia was chosen for further motif detection experiments.
-
+Initial experiments indicate that Melodia demonstrates robustness in polyphonic contexts due to its deep-salience algorithm, which effectively identifies melody lines even when multiple instruments are present. In contrast, CREPE excels in providing clearer pitch contours for isolated segments. Based on these observations, we selected Melodia for subsequent motif detection experiments.
 \subsection{Motif Detection Results}
-\begin{itemize}
-    \item Known motifs were successfully detected in several tracks using the matrix profile method.
-    \item Hyper-parameter sensitivity studies indicated that small changes significantly affect motif segmentation.
-    \item DTW, while computationally intensive, improved temporal alignment of detected motifs.
-\end{itemize}
+Upon evaluating the results of our motif detection process, we estimate that approximately 80\% of the identified matches were accurate. This indicates that our method is yielding promising results, suggesting a strong potential for reliable motif detection in musical compositions.
 
 \subsection{Cross-Track Motif Extraction}
-Early experiments comparing motifs across different tracks have shown promising patterns of recurrence, although further validation and refinement are required.
+Early experiments comparing motifs across different tracks have revealed encouraging patterns of recurrence. However, we recognize the need for further validation and refinement to enhance the reliability and accuracy of these findings.
 
 \subsection{Challenges}
 Major challenges include:
@@ -181,6 +176,7 @@ Future work will focus on computational refinements and exploring adaptive param
 
 \subsection{Interpretation of Preliminary Results}
 The integration of audio-based extraction with symbolic thematic alignment validates our hybrid approach and provides a basis for further refinement. Some discrepancies remain between annotated motifs and automatically detected ones, highlighting the need for improved synchronization and parameter optimization.
+We have not evaluated against the extracted time-stamps from the catalogue. This is because the catalogue \ref{foot:catalogue} only contains one time-stamp per movie apperance.
 
 \subsection{Comparison of Methods}
 Stumpy offers rapid candidate motif detection and computational efficiency, though it is sensitive to parameter choices. In contrast, DTW yields more precise alignments at the expense of increased computational load. The trade-off between speed and accuracy is a key consideration in refining the pipeline.
