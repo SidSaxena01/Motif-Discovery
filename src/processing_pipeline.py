@@ -8,11 +8,14 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from utils.utils import (detect_motif_in_track, plot_motif_detection_results,
-                         plot_star_wars_motif_matches)
+from utils.utils import (
+    detect_motif_in_track,
+    plot_motif_detection_results,
+    plot_star_wars_motif_matches,
+)
 
-JSON_MAPPING_FILE = "star_wars_comprehensive_mapping_hybrid.json"
-MELODIA_RESULTS_CSV = "results.csv"
+JSON_MAPPING_FILE = "data/mappings/sw_motifs_tracks_mapping_sample.json"
+MELODIA_RESULTS_CSV = "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/processed/results.csv"
 
 
 def load_melodia_df(melodia_file: str) -> pd.DataFrame:
@@ -20,6 +23,7 @@ def load_melodia_df(melodia_file: str) -> pd.DataFrame:
 
 
 def get_melodia_bpm_for_track(melodia_df: pd.DataFrame, filename: str) -> float:
+    print(f"Getting BPM for {filename}")
     return melodia_df[melodia_df["file"] == filename]["bpm"].values[0]
 
 
@@ -34,6 +38,7 @@ def get_motif_matches(
     fig_output_folder: str = "figures",
     fig_output_filename: str = "motif_matches.png",
     show_plot: bool = False,
+    track_name: str = "Star Wars Main Theme",
 ) -> Dict[Any, Any]:
     sw_pitch = mass_results["audio_pitch"]
     sw_pitch_times = mass_results["audio_pitch_times"]
@@ -69,6 +74,7 @@ def get_motif_matches(
         out_folder=fig_output_folder,
         out_filename=fig_output_filename,
         show=show_plot,
+        plot_title=f"Star Wars Main Theme - Motif Mat - {track_name}",
     )
 
 
@@ -91,8 +97,8 @@ def process_audio_file(
     if not check_if_file_exists(input_musicxml_filepath):
         raise FileNotFoundError(f"File not found: {input_musicxml_filepath}")
 
-    bpm_estimate = get_melodia_bpm_for_track(melodia_results_df, input_audio_filepath)
     # print(f"Processing audio file: {input_audio_filepath} vs. {input_musicxml_filepath}")
+    bpm_estimate = get_melodia_bpm_for_track(melodia_results_df, input_audio_filepath)
     mass_results = detect_motif_in_track(
         input_audio_filepath, input_musicxml_filepath, bpm_estimate, method="mass"
     )
@@ -120,13 +126,22 @@ def process_audio_file(
         fig_output_folder=output_fig_folder,
         fig_output_filename=fig_output_filename,
         show_plot=False,
+        track_name=input_audio_filepath.split("/")[-1],
     )
     return {
         "input_audio_filepath": input_audio_filepath,
         "timestamps_results": timestamps_results,
-        "mass_results": mass_results,
-        "match_results": match_results,
-        "stump_results": stump_results,
+        # "mass_results": {
+        #     "best_idx": mass_results["best_idx"],
+        #     "best_dist": mass_results["best_dist"],
+        #     "dist_profile": mass_results["dist_profile"],
+        # },
+        # "match_results": {
+        #     "matches_shape": match_results["matches"].shape,
+        # },
+        # "stump_results": {
+        #     "mp_shape": stump_results["mp"].shape,
+        # },
     }
 
 
@@ -149,7 +164,7 @@ def processing_pipeline(
 
     for motif_data in tqdm(motif_mapping, desc="Processing Motifs"):
         motif_id = motif_data["motif_id"]
-        motif_xml_path = motif_data["musicxml"]
+        motif_xml_path = motif_data["musicxml"]["file_path"]
 
         for track in tqdm(motif_data["tracks"], desc="Processing Tracks", leave=False):
             track_name = track.get("track_name", None)
@@ -168,6 +183,7 @@ def processing_pipeline(
                 fig_output_filename=f"{motif_id}_{track_name}_motif_matches.png",
             )
             results.append(result)
+        break
 
     pd.DataFrame(results).to_csv(output_csv, index=False)
     print(f"{len(results)} results saved to {output_csv}")
