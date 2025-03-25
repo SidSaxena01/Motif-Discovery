@@ -69,6 +69,9 @@ The Star Wars thematic corpus includes multiple themes available in symbolic for
 
 \section{Methodology}
 
+\subsection{Audio Stem Separation using Demucs}
+Before proceeding with melody extraction, we applied a source separation step using Demucs (model: ht\_demucs\_ft). This advanced deep-learning model decomposes the audio tracks into four stems: vocals, bass, drums, and other. In our implementation, each audio file was processed with Demucs, and we observed that isolating the \textit{other} stem led to slightly improved melody extraction results. We hypothesize that by explicitly extracting the drums and bass stems, the algorithm is better able to focus on the relevant melodic content present in the remaining signal. This preprocessing step thus aids both the CREPE and Melodia models in achieving more accurate pitch contour extraction.
+
 \subsection{Data Description and Preprocessing}
 The system leverages two sources of data:
 \begin{itemize}
@@ -112,6 +115,7 @@ To explore motif recurrence across different audio tracks, we compare pitch cont
 The end-to-end pipeline is designed as follows:
 \begin{enumerate}
     \item \textbf{Input:} Star Wars audio recordings and corresponding XML files.
+    \item \textbf{Stem Separation:} Each audio file is processed with Demucs (ht\_demucs\_ft) to separate the track into vocals, bass, drums, and other. For melody extraction, only the \textit{other} stem is used.
     \item \textbf{Thematic Extraction:} \texttt{music21} parses and transforms symbolic data into time-aligned arrays.
     \item \textbf{Melody Extraction:} Audio is processed via CREPE and Melodia to generate pitch contour arrays.
     \item \textbf{Data Transformation:} Align audio and symbolic data using BPM normalization and interpolation.
@@ -171,14 +175,15 @@ We plan to explore additional deep learning approaches to address limitations in
 Additional manual annotations and dataset augmentation are intended to further ground and improve motif detection accuracy.
 
 \section{Conclusion}
-This report presents an end-to-end pipeline for automatic motif detection in the Star Wars soundtrack, integrating audio-based melody extraction with symbolic alignment. Preliminary results demonstrate the feasibility of a hybrid approach that leverages both fast matrix profile methods and precise DTW alignment. Although challenges remain, especially in data synchronization and parameter tuning, early findings suggest that our approach can enhance musical retrieval and analysis in orchestral soundtracks. Final conclusions will be drawn as further experiments refine the pipeline.
+This report presents an end-to-end pipeline for automatic motif detection in the Star Wars soundtrack, integrating audio-based melody extraction with symbolic alignment. A key innovation of our approach is the incorporation of a Demucs-based stem separation step, which extracts the vocal, bass, and percussive elements out of the orchestral recordings to enhance melody extraction. Preliminary results demonstrate that combining this audio preprocessing with fast matrix profile methods and precise DTW alignment not only improves motif detection accuracy but also bolsters overall retrieval in complex orchestral recordings. Although challenges remain—especially in data synchronization, hyper-parameter tuning, and computational cost—the encouraging early findings suggest that our hybrid approach holds promise for advancing musical retrieval and analysis in film soundtracks. Future work will focus on refining these methods and validating improvements across larger datasets.
 
-% \section*{References}
+% References
 \begin{thebibliography}{00}
 \bibitem{Nuttall2023} T. Nuttall, G. Plaja-Roglans, L. Pearson, and X. Serra, ``The Matrix Profile for Motif Discovery in Audio—An Example Application in Carnatic Music,'' in \textit{Music in the AI Era}, M. Aramaki \textit{et al.}, Eds., vol. 13770, pp. 228--237, Springer, 2023, doi:10.1007/978-3-031-35382-6\_18.
 \bibitem{Ganguli2017} K. K. Ganguli, A. Lele, S. Pinjani, P. Rao, A. Srinivasamurthy, and S. Gulati, ``Melodic shape stylization for robust and efficient motif detection in Hindustani vocal music,'' in \textit{Proc. 2017 Twenty-Third National Conference on Communications (NCC)}, pp. 1--6, 2017, doi:10.1109/NCC.2017.8077055.
 \bibitem{Hao2013} Y. Hao, M. Shokoohi-Yekta, G. Papageorgiou, and E. Keogh, ``Parameter-Free Audio Motif Discovery in Large Data Archives,'' in \textit{Proc. 2013 IEEE 13th International Conference on Data Mining}, pp. 261--270, 2013, doi:10.1109/ICDM.2013.30.
 \bibitem{Krause2021} M. Krause, M. Müller, and C. Weiß, ``Towards Leitmotif Activity Detection in Opera Recordings,'' \textit{Trans. Int. Soc. Music Inf. Retrieval}, vol. 4, no. 1, pp. 127--140, 2021, doi:10.5334/tismir.116.
+\bibitem{DeFossez2019} A. D{\'e}fossez, N. Usunier, L. Bottou, and F. R. Bach, ``Demucs: Deep Extractor for Music Sources with extra unlabeled data remixed,'' \textit{CoRR}, vol. abs/1909.01174, 2019.
 \end{thebibliography}
 
 \section*{Appendices}
