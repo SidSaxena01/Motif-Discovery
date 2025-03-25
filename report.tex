@@ -82,14 +82,14 @@ The system leverages two sources of data:
 \subsection{Audio-based Melody Extraction}
 \textbf{CREPE:}
 \begin{itemize}
-    \item Utilized a deep-learning framework to extract robust pitch estimates from complex audio environments.
+    \item Utilizes a deep-learning framework to estimate the main pitch component from complex audio environments.
     \item Preprocessing includes audio normalization and resampling to 16 kHz.
 \end{itemize}
 
 \textbf{Melodia:}
 \begin{itemize}
     \item Implements a signal processing technique to extract the predominant melody, relying on Viterbi encoding.
-    \item Although sensitive to noise and overlapping sounds, it often yields clearer pitch contours and is computationally efficient.
+    \item Although sensitive to noise and overlapping sounds, it can yield clearer pitch contours and is computationally efficient.
     \item For our application, Melodia’s performance and speed made it the preferred choice.
 \end{itemize}
 
