@@ -303,6 +303,7 @@ def detect_motif_in_track(
 def plot_motif_detection_results(
     results: dict,
     method: str,
+    track_name: str = "audio_track",
     out_folder: str = "figures",
     fig_prefix: str = "motif_detection",
     show_plot: bool = True,
@@ -346,7 +347,7 @@ def plot_motif_detection_results(
 
     # Plot the main pitch contour
     plt.plot(audio_times, audio_pitch, label="Audio Pitch", color="gray", alpha=0.6)
-    plt.title(f"Motif Detection via {method.upper()}", fontsize=14)
+    plt.title(f"Motif Detection via {method.upper()} - {track_name}", fontsize=12)
     plt.xlabel("Time (s)")
     plt.ylabel("Frequency (Hz)")
     plt.grid(True, alpha=0.3)
@@ -438,7 +439,7 @@ def plot_motif_detection_results(
         # unless you do a "sliding" approach. So we just annotate the distance.
 
     plt.legend(loc="upper right")
-    save_path = os.path.join(out_folder, f"{fig_prefix}_{method}.png")
+    save_path = os.path.join(out_folder, f"{fig_prefix}_{method}_{track_name}.png")
     plt.savefig(save_path, dpi=150)
 
     if show_plot:
