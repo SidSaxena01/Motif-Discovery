@@ -15,7 +15,9 @@ from utils.utils import (
 )
 
 JSON_MAPPING_FILE = "data/mappings/sw_motifs_tracks_mapping_sample.json"
-MELODIA_RESULTS_CSV = "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/processed/results.csv"
+MELODIA_RESULTS_CSV = (
+    "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/processed/results.csv"
+)
 
 
 def load_melodia_df(melodia_file: str) -> pd.DataFrame:
@@ -117,7 +119,12 @@ def process_audio_file(
         window_size=stump_window_size,
     )
 
-    plot_motif_detection_results(results=mass_results, method="mass", show_plot=False)
+    plot_motif_detection_results(
+        results=mass_results,
+        method="mass",
+        show_plot=False,
+        track_name=input_audio_filepath.split("/")[-1],
+    )
     # plot_motif_detection_results(results=match_results, method="match")
     # plot_motif_detection_results(results=stump_results, method="stump")
     timestamps_results = get_motif_matches(
