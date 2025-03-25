@@ -40,6 +40,7 @@ fernando.garcia11@estudiant.upf.edu}
 
 \begin{abstract}
 This project addresses the challenge of automatically detecting recurring musical motifs in film soundtracks by focusing on the Star Wars dataset. Our dual strategy begins with the extraction of melody information from audio recordings using two contrasting techniques: the CREPE deep-learning model and the signal processing-based Melodia algorithm. We then align these audio features with symbolic thematic data from XML files parsed via \texttt{music21}. For motif detection, we experiment with the stumpy matrix profile method—which offers fast candidate discovery—and Dynamic Time Warping (DTW), which, although computationally heavier, provides precise temporal alignments. Early findings indicate that while stumpy achieves acceptable accuracy with better speed, DTW’s detailed alignments come at a significant computational cost. We further explore motif comparisons across different audio tracks to identify recurrent patterns. Although challenges remain (such as data synchronization between noisy audio and cleaner symbolic data, and hyper-parameter tuning), our hybrid approach demonstrates promise for advancing musical pattern discovery in orchestral soundtracks.
+More details about the code can be found in our GitHub repository\footnote{\url{https://github.com/SidSaxena01/Motif-Discovery}}.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -67,14 +68,14 @@ The report is organized as follows. Section II reviews related work and datasets
 
 Previous studies have utilized both signal processing and deep learning approaches for motif detection. The matrix profile method has been successfully applied in exemplar works (e.g., Nuttall et al., 2023) for discovering repeated segments in time series data. Alternative methods—such as techniques replacing DTW with string matching (Ganguli et al., 2017)—demonstrate the value of symbolic abstraction in reducing computational complexity. More recent approaches have involved deep learning (Krause et al., 2021) to detect leitmotif activities. Our work builds on these foundations by applying these methods to film soundtracks and addressing data synchronization challenges.
 
-The Star Wars thematic corpus includes multiple themes available in symbolic formats (XML, Humdrum) along with time-stamped motif occurrences. In the broader MIR community, annotated datasets for orchestral music are limited, making motif annotation and detection an open challenge. This project not only validates motif detection techniques on a complex dataset but also contributes to improved annotation strategies.
+The Star Wars thematic corpus\footnote{\href{https://github.com/Computational-Cognitive-Musicology-Lab/Star-Wars-Thematic-Corpus/}{Star Wars thematic corpus GitHub}} includes multiple themes available in symbolic formats (XML, Humdrum) along with time-stamped motif occurrences. In the broader MIR community, annotated datasets for orchestral music are limited, making motif annotation and detection an open challenge. This project not only validates motif detection techniques on a complex dataset but also contributes to improved annotation strategies.
 
 \section{Methodology}
 
 \subsection{Dataset Digitisation}
 To enable subsequent processing of both audio and symbolic data, the initial dataset was converted into a digital format through the following steps:
 \begin{itemize}
-    \item \textbf{OCR Processing:} Raw text was extracted from the PDF using Optical Character Recognition.
+    \item \textbf{OCR Processing:} Raw text was extracted from \href{https://franklehman.com/starwars/}{Frank Lehman's Star Wars Thematic Catalogue PDF} using Optical Character Recognition.
     \item \textbf{Metadata Retrieval:} The YouTube API was employed to obtain track names associated with each YouTube link.
     \item \textbf{Data Mapping:} Fuzzy matching techniques, supplemented by a Large Language Model (LLM), were used to map motif names to their corresponding MusicXML files and to align YouTube titles with the available OST filenames on disk.
 \end{itemize}
@@ -120,6 +121,20 @@ To explore motif recurrence across various audio tracks, pitch contour segments 
     \includegraphics[width=0.9\linewidth]{figures/dtw-matches.png}
     \caption{DTW matches.}
     \label{fig:dtw-match}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/dtw-matches-warping-path.png}
+    \caption{DTW warping path}
+    \label{fig:dtw-warp}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_mass.png}
+    \caption{Motif detection using mass algorithm.}
+    \label{fig:mass}
 \end{figure}
 
 \section{Experimental Setup}
@@ -197,6 +212,7 @@ This report presents an end-to-end pipeline for automatic motif detection in the
 \bibitem{Hao2013} Y. Hao, M. Shokoohi-Yekta, G. Papageorgiou, and E. Keogh, ``Parameter-Free Audio Motif Discovery in Large Data Archives,'' in \textit{Proc. 2013 IEEE 13th International Conference on Data Mining}, pp. 261--270, 2013, doi:10.1109/ICDM.2013.30.
 \bibitem{Krause2021} M. Krause, M. Müller, and C. Weiß, ``Towards Leitmotif Activity Detection in Opera Recordings,'' \textit{Trans. Int. Soc. Music Inf. Retrieval}, vol. 4, no. 1, pp. 127--140, 2021, doi:10.5334/tismir.116.
 \bibitem{DeFossez2019} A. Defossez, N. Usunier, L. Bottou, and F. R. Bach, ``Demucs: Deep Extractor for Music Sources with extra unlabeled data remixed,'' \textit{CoRR}, vol. abs/1909.01174, 2019.
+\bibitem{Arthur2023} C. Arthur, F. Lehman, and J. McNamara, ``Presenting the SWTC: A Symbolic Corpus of Themes from John Williams' Star Wars Episodes I-IX,'' arXiv preprint arXiv:2309.03298, 2023. Available: \url{https://arxiv.org/abs/2309.03298}.
 \end{thebibliography}
 
 \section*{Appendix: Visualizations of Motif Detection Results}
@@ -206,20 +222,6 @@ This report presents an end-to-end pipeline for automatic motif detection in the
     \includegraphics[width=0.9\linewidth]{figures/1a. MAIN THEME_Star Wars Episode IV A New Hope (1977) Soundtrack 02 Main Title _ Rebel Blockade _Runner Medley_motif_matches.png}
     \caption{Main motif detection in main theme.}
     \label{fig:themes}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/dtw-matches-warping-path.png}
-    \caption{DTW warping path}
-    \label{fig:dtw-warp}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/motif_detection_mass.png}
-    \caption{Motif detection using mass algorithm.}
-    \label{fig:mass}
 \end{figure}
 
 \enddocument
