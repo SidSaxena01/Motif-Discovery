@@ -1,0 +1,3372 @@
+[
+  {
+    "motif_id": "1a. MAIN THEME",
+    "motif_name": "MAIN THEME",
+    "appearances": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "R",
+      "S"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:00:28",
+      "cue_name": "Main Title",
+      "cue_number": ""
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 02 Main Title / Rebel Blockade /Runner Medley",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/02 - Main Title-Rebel Blockade Runner/02 - Main Title-Rebel Blockade Runner_other.mp3",
+        "file_name": "02 - Main Title-Rebel Blockade Runner_other.mp3",
+        "timestamp": "00:06",
+        "timestamp_seconds": 6,
+        "youtube_url": "https://youtu.be/x2J5Oifxp7w?t=6s",
+        "film_code": "IV"
+      }],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/1a_Main_Theme_Basic_(A_Section).musicxml",
+      "file_name": "1a_Main_Theme_Basic_(A_Section).musicxml"
+    }
+  },
+  {
+    "motif_id": "1b. MAIN THEME",
+    "motif_name": "MAIN THEME",
+    "appearances": [],
+    "first_appearance": {
+      "film": "",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/1b_Main_Theme_Basic_(B_Section).musicxml",
+      "file_name": "1b_Main_Theme_Basic_(B_Section).musicxml"
+    }
+  },
+  {
+    "motif_id": "2. REBEL FANFARE",
+    "motif_name": "REBEL FANFARE",
+    "appearances": [
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "R",
+      "S",
+      "I",
+      "II",
+      "IV",
+      "M",
+      "K"
+    ],
+    "first_appearance": {
+      "film": "III",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars: A New Hope Soundtrack - 04. The Death Star/The Stormtroopers*",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/04 - The Death Star-The Stormtroopers/04 - The Death Star-The Stormtroopers_other.wav",
+        "file_name": "04 - The Death Star-The Stormtroopers_other.wav",
+        "timestamp": "01:09",
+        "timestamp_seconds": 69,
+        "youtube_url": "https://youtu.be/Oo9GN--eoGk?t=1m9s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "04:58",
+        "timestamp_seconds": 298,
+        "youtube_url": "https://youtu.be/WxqqiUh1lec?t=298",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode 4 Soundtrack - TIE Fighter Attack",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/09 - Ben Kenobi's Death-Tie Fighter Attack/09 - Ben Kenobi's Death-Tie Fighter Attack_other.wav",
+        "file_name": "09 - Ben Kenobi's Death-Tie Fighter Attack_other.wav",
+        "timestamp": "00:41",
+        "timestamp_seconds": 41,
+        "youtube_url": "https://youtu.be/JHGXfFJ2TMk?t=41s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars V - The Battle of Hoth",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "03:12",
+        "timestamp_seconds": 192,
+        "youtube_url": "https://youtu.be/1riVCPmtJuY?t=3m12s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "The Return of the Jedi",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/01 - Star Wars and the Revenge of the Sith/01 - Star Wars and the Revenge of the Sith_other.wav",
+        "file_name": "01 - Star Wars and the Revenge of the Sith_other.wav",
+        "timestamp": "00:33",
+        "timestamp_seconds": 33,
+        "youtube_url": "https://youtu.be/MtB6kOMh5_k?t=33",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "John Williams - The Falcon (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:59",
+        "timestamp_seconds": 59,
+        "youtube_url": "https://youtu.be/e8_2K7QNtpI?t=59s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Peace and Purpose (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:49",
+        "timestamp_seconds": 169,
+        "youtube_url": "https://youtu.be/8FviFi42Y4c?t=2m49s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "FALCON FLIGHT - from the STAR WARS: THE RISE OF SKYWALKER SOUNDTRACK.",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:57",
+        "timestamp_seconds": 57,
+        "youtube_url": "https://youtu.be/tBLBOPXYPBo?t=57",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Michael Giacchino - AT-ACT Assault (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:24",
+        "timestamp_seconds": 84,
+        "youtube_url": "https://youtu.be/hGFR50v7d-k?t=1m24s",
+        "film_code": "R"
+      },
+      {
+        "track_name": "John Powell - Is This Seat Taken? (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:48",
+        "timestamp_seconds": 108,
+        "youtube_url": "https://youtu.be/W77Z_Iruc5Y?t=1m48s",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Episode 1 Complete Score | \"After the Victory\" (Reconstructed)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:29",
+        "timestamp_seconds": 29,
+        "youtube_url": "https://youtu.be/yZnnh_snf4I?t=29",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode 2 Soundtrack- Love Pledge And The Arena",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/12 - Love Pledge and the Arena/12 - Love Pledge and the Arena_other.wav",
+        "file_name": "12 - Love Pledge and the Arena_other.wav",
+        "timestamp": "08:09",
+        "timestamp_seconds": 489,
+        "youtube_url": "https://youtu.be/QEaoh_NeZV8?t=8m9s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 06 The Hologram Binary Sunset Medley",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/06 - The Hologram-Binary Sunset/06 - The Hologram-Binary Sunset_other.mp3",
+        "file_name": "06 - The Hologram-Binary Sunset_other.mp3",
+        "timestamp": "02:21",
+        "timestamp_seconds": 141,
+        "youtube_url": "https://youtu.be/iC5JjKZLSOs?t=2m21s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 36 Anakin is Free",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "04:45",
+        "timestamp_seconds": 285,
+        "youtube_url": "https://youtu.be/34Xf97_cU_o?t=4m45s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode 2 Soundtrack- Departing Coruscant",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/05 - Departing Coruscant/05 - Departing Coruscant_other.wav",
+        "file_name": "05 - Departing Coruscant_other.wav",
+        "timestamp": "00:47",
+        "timestamp_seconds": 47,
+        "youtube_url": "https://youtu.be/ghTK9UsJxGg?t=47s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "John Williams - Battle of the Heroes (Audio)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/03 - Battle of the Heroes/03 - Battle of the Heroes_other.wav",
+        "file_name": "03 - Battle of the Heroes_other.wav",
+        "timestamp": "01:58",
+        "timestamp_seconds": 118,
+        "youtube_url": "https://youtu.be/FHuD5y-PZM0?t=1m58s",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars - Throne Room / Finale",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/11 - The Throne Room-End Title/11 - The Throne Room-End Title_other.wav",
+        "file_name": "11 - The Throne Room-End Title_other.wav",
+        "timestamp": "00:20",
+        "timestamp_seconds": 20,
+        "youtube_url": "https://youtu.be/0Ca5A-7wy_A?t=20s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars V - Rescue from Cloud City / Hyperspace",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:19",
+        "timestamp_seconds": 199,
+        "youtube_url": "https://youtu.be/QkV4ctqDI_c?t=3m19s",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars VI (The Complete Score) - Funeral Pyre For A Jedi",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://youtu.be/1ifhBG2kHgM",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Farewell and The Trip (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:44",
+        "timestamp_seconds": 44,
+        "youtube_url": "https://youtu.be/Itzm8-kcOAg?t=44s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Last Jedi (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:31",
+        "timestamp_seconds": 31,
+        "youtube_url": "https://youtu.be/U9e5JcKxHaA?t=31s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - The Force Is with You (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:41",
+        "timestamp_seconds": 161,
+        "youtube_url": "https://youtu.be/kIr-3GYLZMM?t=161",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Michael Giacchino - Rogue One (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:20",
+        "timestamp_seconds": 20,
+        "youtube_url": "https://youtu.be/Pf-cg9W5fQY?t=20s",
+        "film_code": "R"
+      },
+      {
+        "track_name": "Open the Door",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:11",
+        "timestamp_seconds": 11,
+        "youtube_url": "https://youtu.be/ftNnSM_VnTM?t=11",
+        "film_code": null
+      },
+      {
+        "track_name": "Teacher's Pet",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode V - The Empire Strikes Back/CD2/01.The Imperial March (Darth Vader's Theme)/other.mp3",
+        "file_name": "other.mp3",
+        "timestamp": "01:03",
+        "timestamp_seconds": 63,
+        "youtube_url": "https://youtu.be/I3OlQlnJM10?t=63",
+        "film_code": "V"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:14",
+        "timestamp_seconds": 74,
+        "youtube_url": "https://youtu.be/WBCxbM3eNws?t=74",
+        "film_code": null
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/2_Rebel_Fanfare_Basic.musicxml",
+      "file_name": "2_Rebel_Fanfare_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "3. FORCE",
+    "motif_name": "FORCE",
+    "appearances": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "R",
+      "M",
+      "B",
+      "K",
+      "IV",
+      "K",
+      "IV",
+      "II",
+      "R",
+      "S",
+      "VI",
+      "B",
+      "R",
+      "K",
+      "I",
+      "M",
+      "I",
+      "S",
+      "R",
+      "I",
+      "I",
+      "R",
+      "I",
+      "I",
+      "S",
+      "IV"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/3_Force_Theme_Basic.musicxml",
+      "file_name": "3_Force_Theme_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "4. LEIA",
+    "motif_name": "LEIA",
+    "appearances": [
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "R",
+      "K"
+    ],
+    "first_appearance": {
+      "film": "III",
+      "timestamp": "0:05:07",
+      "cue_name": "The War",
+      "cue_number": ""
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 06 The Hologram Binary Sunset Medley",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/06 - The Hologram-Binary Sunset/06 - The Hologram-Binary Sunset_other.mp3",
+        "file_name": "06 - The Hologram-Binary Sunset_other.mp3",
+        "timestamp": "00:28",
+        "timestamp_seconds": 28,
+        "youtube_url": "https://youtu.be/iC5JjKZLSOs?t=28s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "A New Hope and End Credits",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/15 - A New Hope and End Credits/15 - A New Hope and End Credits_other.wav",
+        "file_name": "15 - A New Hope and End Credits_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=ZK52tEenER8",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 06 The Hologram Binary Sunset Medley",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/06 - The Hologram-Binary Sunset/06 - The Hologram-Binary Sunset_other.mp3",
+        "file_name": "06 - The Hologram-Binary Sunset_other.mp3",
+        "timestamp": "00:30",
+        "timestamp_seconds": 30,
+        "youtube_url": "https://youtu.be/iC5JjKZLSOs?t=30s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars V - Rescue from Cloud City / Hyperspace",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "05:16",
+        "timestamp_seconds": 316,
+        "youtube_url": "https://youtu.be/QkV4ctqDI_c?t=5m16s",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 11 Speeder Bike Chase, Land of the Ewoks",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-11 Speeder Bike Chase   Land of the Ewoks/1-11 Speeder Bike Chase   Land of the Ewoks_other.wav",
+        "file_name": "1-11 Speeder Bike Chase   Land of the Ewoks_other.wav",
+        "timestamp": "07:09",
+        "timestamp_seconds": 429,
+        "youtube_url": "https://youtu.be/ZuJX-GfcjhM?t=7m9s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "John Williams - Han and Leia (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:08",
+        "timestamp_seconds": 8,
+        "youtube_url": "https://youtu.be/1mRB-6IwZMs?t=8s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Supremacy (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:04",
+        "timestamp_seconds": 124,
+        "youtube_url": "https://youtu.be/qnQ779i3fDg?t=2m4s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - The Final Saber Duel (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:55",
+        "timestamp_seconds": 175,
+        "youtube_url": "https://youtu.be/XTdwliaC-R0?t=175",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Michael Giacchino - Rogue One (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:51",
+        "timestamp_seconds": 111,
+        "youtube_url": "https://youtu.be/Pf-cg9W5fQY?t=1m51s",
+        "film_code": "R"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:24",
+        "timestamp_seconds": 24,
+        "youtube_url": "https://youtu.be/WBCxbM3eNws?t=24",
+        "film_code": null
+      },
+      {
+        "track_name": "*Star Wars Episode IV A New Hope (1977) Soundtrack 03 Imperial Attack",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/03 - Imperial Attack/03 - Imperial Attack_other.mp3",
+        "file_name": "03 - Imperial Attack_other.mp3",
+        "timestamp": "06:15",
+        "timestamp_seconds": 375,
+        "youtube_url": "https://youtu.be/j1pf6s8MGrs?t=6m15s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars: A New Hope Soundtrack - 09. Burning Homestead",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/09 - Burning Homestead/09 - Burning Homestead_other.mp3",
+        "file_name": "09 - Burning Homestead_other.mp3",
+        "timestamp": "01:49",
+        "timestamp_seconds": 109,
+        "youtube_url": "https://youtu.be/wolFdVti3nY?t=1m49s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars VI - The Battle of Endor III",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "01:49",
+        "timestamp_seconds": 109,
+        "youtube_url": "https://youtu.be/RT1763QZQvI?t=1m49s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Clothes Iron Scene | Star Wars Episode VIII The Last Jedi.",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/12 - The Immolation Scene/12 - The Immolation Scene_other.wav",
+        "file_name": "12 - The Immolation Scene_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=zCGschgLUPI",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "Michael Giacchino - When Has Become Now (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:49",
+        "timestamp_seconds": 109,
+        "youtube_url": "https://youtu.be/VM1vU-jFivE?t=1m49s",
+        "film_code": "R"
+      },
+      {
+        "track_name": "John Powell - Reminiscence Therapy (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:01",
+        "timestamp_seconds": 1,
+        "youtube_url": "https://youtu.be/gWCl_JWfmw4?t=1s",
+        "film_code": "S"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/21_Luke___Leia_Basic.musicxml",
+      "file_name": "21_Luke___Leia_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "5. DEATH STAR",
+    "motif_name": "DEATH STAR",
+    "appearances": [
+      "IV",
+      "VI",
+      "VIII",
+      "R",
+      "S",
+      "VI",
+      "VII"
+    ],
+    "first_appearance": {
+      "film": "IV",
+      "timestamp": "0:08:48",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/5_Death_Star_Basic.musicxml",
+      "file_name": "5_Death_Star_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "6. IMPERIALS",
+    "motif_name": "IMPERIALS",
+    "appearances": [
+      "IV",
+      "R",
+      "S",
+      "IV",
+      "IX",
+      "R",
+      "S",
+      "IV",
+      "K",
+      "R",
+      "R"
+    ],
+    "first_appearance": {
+      "film": "IV",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/6_Imperial_Motif_Basic.musicxml",
+      "file_name": "6_Imperial_Motif_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "7. JAWAS",
+    "motif_name": "JAWAS",
+    "appearances": [
+      "IV"
+    ],
+    "first_appearance": {
+      "film": "IV",
+      "timestamp": "0:12:58",
+      "cue_name": "The Little People",
+      "cue_number": "2m3"
+    },
+    "tracks": [
+      {
+        "track_name": "*Star Wars Episode IV A New Hope (1977) Soundtrack 03 Imperial Attack",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/03 - Imperial Attack/03 - Imperial Attack_other.mp3",
+        "file_name": "03 - Imperial Attack_other.mp3",
+        "timestamp": "04:54",
+        "timestamp_seconds": 294,
+        "youtube_url": "https://youtu.be/j1pf6s8MGrs?t=4m54s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars: A New Hope Soundtrack - 10. The Battle Of Yavin",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "01:49",
+        "timestamp_seconds": 109,
+        "youtube_url": "https://youtu.be/aHQrcyerVQQ?t=1m49s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Imperial Attack",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/03 - Imperial Attack/03 - Imperial Attack_other.mp3",
+        "file_name": "03 - Imperial Attack_other.mp3",
+        "timestamp": "02:29",
+        "timestamp_seconds": 149,
+        "youtube_url": "https://youtu.be/msqfRw197tk?t=149",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars: A New Hope Soundtrack - 10. The Battle Of Yavin",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "01:49",
+        "timestamp_seconds": 109,
+        "youtube_url": "https://youtu.be/aHQrcyerVQQ?t=1m49s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Michael Giacchino - Krennic's Aspirations (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:35",
+        "timestamp_seconds": 95,
+        "youtube_url": "https://youtu.be/lAttuezmWKs?t=1m35s",
+        "film_code": "R"
+      },
+      {
+        "track_name": "John Powell - Train Heist (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:34",
+        "timestamp_seconds": 214,
+        "youtube_url": "https://youtu.be/oJ9o2jttC5g?t=3m34s",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 21 The Tractor Beam Chasm Crossfire Medley",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/08 - The Tractor Beam-Chasm Crossfire/08 - The Tractor Beam-Chasm Crossfire_other.wav",
+        "file_name": "08 - The Tractor Beam-Chasm Crossfire_other.wav",
+        "timestamp": "02:30",
+        "timestamp_seconds": 150,
+        "youtube_url": "https://youtu.be/tZWytKNv_pk?t=150",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "John Williams - Battle of the Resistance (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/03 - Battle of the Heroes/03 - Battle of the Heroes_other.wav",
+        "file_name": "03 - Battle of the Heroes_other.wav",
+        "timestamp": "01:57",
+        "timestamp_seconds": 117,
+        "youtube_url": "https://youtu.be/Le5gcPuCOyI?t=117",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:23",
+        "timestamp_seconds": 23,
+        "youtube_url": "https://youtu.be/N9l94NPgnBQ?t=23",
+        "film_code": null
+      },
+      {
+        "track_name": "John Powell - Train Heist (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:30",
+        "timestamp_seconds": 210,
+        "youtube_url": "https://youtu.be/oJ9o2jttC5g?t=210",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 04 The Dune Sea of Tatooine / Jawa Sandcrawler",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/04 - The Dune Sea of Tatooine-Jawa Sandcrawler/04 - The Dune Sea of Tatooine-Jawa Sandcrawler_other.mp3",
+        "file_name": "04 - The Dune Sea of Tatooine-Jawa Sandcrawler_other.mp3",
+        "timestamp": "01:43",
+        "timestamp_seconds": 103,
+        "youtube_url": "https://youtu.be/ZxMdImpj4mk?t=1m43s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 04 The Dune Sea of Tatooine / Jawa Sandcrawler",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/04 - The Dune Sea of Tatooine-Jawa Sandcrawler/04 - The Dune Sea of Tatooine-Jawa Sandcrawler_other.mp3",
+        "file_name": "04 - The Dune Sea of Tatooine-Jawa Sandcrawler_other.mp3",
+        "timestamp": "01:43",
+        "timestamp_seconds": 103,
+        "youtube_url": "https://youtu.be/ZxMdImpj4mk?t=1m43s",
+        "film_code": "IV"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/7_Jawas_Basic.musicxml",
+      "file_name": "7_Jawas_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "8. TIE FIGHTER ATTACK",
+    "motif_name": "TIE FIGHTER ATTACK",
+    "appearances": [
+      "IV",
+      "VI",
+      "VIII",
+      "S"
+    ],
+    "first_appearance": {
+      "film": "IV",
+      "timestamp": "1:34:34",
+      "cue_name": "Here They Come ",
+      "cue_number": "10m2"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 22 Ben Kenobi s Death   Tie Fighter Attack",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/09 - Ben Kenobi's Death-Tie Fighter Attack/09 - Ben Kenobi's Death-Tie Fighter Attack_other.wav",
+        "file_name": "09 - Ben Kenobi's Death-Tie Fighter Attack_other.wav",
+        "timestamp": "02:03",
+        "timestamp_seconds": 123,
+        "youtube_url": "https://www.youtube.com/watch?v=Z_EkWBf7hy0&feature=youtu.be&t=2m3s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 22 Ben Kenobi s Death   Tie Fighter Attack",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/09 - Ben Kenobi's Death-Tie Fighter Attack/09 - Ben Kenobi's Death-Tie Fighter Attack_other.wav",
+        "file_name": "09 - Ben Kenobi's Death-Tie Fighter Attack_other.wav",
+        "timestamp": "02:03",
+        "timestamp_seconds": 123,
+        "youtube_url": "https://www.youtube.com/watch?v=Z_EkWBf7hy0&feature=youtu.be&t=2m3s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars VI - The Battle of Endor III",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=RT1763QZQvI",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "John Williams - The Battle of Crait (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "04:12",
+        "timestamp_seconds": 252,
+        "youtube_url": "https://youtu.be/YIIvAoHIsPQ?t=4m12s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Powell - Reminiscence Therapy (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:03",
+        "timestamp_seconds": 123,
+        "youtube_url": "https://youtu.be/gWCl_JWfmw4?t=2m3s",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Episode IV A New Hope (1977) Soundtrack 24 The Throne Room End Title",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/11 - The Throne Room-End Title/11 - The Throne Room-End Title_other.wav",
+        "file_name": "11 - The Throne Room-End Title_other.wav",
+        "timestamp": "00:56",
+        "timestamp_seconds": 56,
+        "youtube_url": "https://www.youtube.com/watch?v=m1dXRe0Z1hw&feature=youtu.be&t=56s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars  The Throne Room/End Title",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/11 - The Throne Room-End Title/11 - The Throne Room-End Title_other.wav",
+        "file_name": "11 - The Throne Room-End Title_other.wav",
+        "timestamp": "00:56",
+        "timestamp_seconds": 56,
+        "youtube_url": "https://youtu.be/248ggPoK158?t=56s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars VI (The Complete Score) - Secret Bunker / The Fleet Enters Hyperspace",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok/2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok_other.wav",
+        "file_name": "2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok_other.wav",
+        "timestamp": "00:57",
+        "timestamp_seconds": 57,
+        "youtube_url": "https://youtu.be/VoEc2vY4_ks?t=57s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "A New Hope and End Credits",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/15 - A New Hope and End Credits/15 - A New Hope and End Credits_other.wav",
+        "file_name": "15 - A New Hope and End Credits_other.wav",
+        "timestamp": "07:47",
+        "timestamp_seconds": 467,
+        "youtube_url": "https://youtu.be/ZK52tEenER8?t=467",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "John Williams - Finale (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "10:18",
+        "timestamp_seconds": 618,
+        "youtube_url": "https://youtu.be/8RCp_VD-Abc?t=618",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/8_TIE_Fighter_Attack_Basic.musicxml",
+      "file_name": "8_TIE_Fighter_Attack_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "9. THRONE ROOM",
+    "motif_name": "THRONE ROOM",
+    "appearances": [
+      "IV",
+      "VI",
+      "III",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "IV",
+      "timestamp": "1:59:24",
+      "cue_name": "End Title",
+      "cue_number": "12m2"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/9_Throne_Room_Basic.musicxml",
+      "file_name": "9_Throne_Room_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "10a. IMPERIAL MARCH",
+    "motif_name": "IMPERIAL MARCH",
+    "appearances": [
+      "I",
+      "II",
+      "III",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "R",
+      "S",
+      "K"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:01:55",
+      "cue_name": "Imperial Probe",
+      "cue_number": "1m2"
+    },
+    "tracks": [
+      {
+        "track_name": "John Williams - The Imperial March from The Empire Strikes Back (Audio)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:10",
+        "timestamp_seconds": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=u7HF4JG1pOg&feature=youtu.be&t=10s",
+        "film_code": "V"
+      },
+      {
+        "track_name": "The High Council Meeting and Qui-Gon's Funeral",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/16 - The High Council Meeting and Qui-Gon_s Funeral/16 - The High Council Meeting and Qui-Gon_s Funeral_other.wav",
+        "file_name": "16 - The High Council Meeting and Qui-Gon_s Funeral_other.wav",
+        "timestamp": "01:14",
+        "timestamp_seconds": 74,
+        "youtube_url": "https://youtu.be/9ZBihl6gk4c?t=74",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Soundtrack Episode II , Extended Edition : Anakin's Confession",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:24",
+        "timestamp_seconds": 24,
+        "youtube_url": "https://youtu.be/FEvf6RdVmKc?t=24s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Enter Lord Vader",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/11 - Enter Lord Vader/11 - Enter Lord Vader_other.wav",
+        "file_name": "11 - Enter Lord Vader_other.wav",
+        "timestamp": "03:16",
+        "timestamp_seconds": 196,
+        "youtube_url": "https://youtu.be/pykumg2nKtI?t=196",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars V - The Battle of Hoth",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "11:15",
+        "timestamp_seconds": 675,
+        "youtube_url": "https://youtu.be/1riVCPmtJuY?t=11m15s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Return Of The Jedi: Darth Vader's Death (From \"Return Of The Jedi\")",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=a5IN9FNy76o",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "I Will Finish What You Started",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:07",
+        "timestamp_seconds": 67,
+        "youtube_url": "https://youtu.be/zFq65yDRf58?t=67",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Revisiting Snoke (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:10",
+        "timestamp_seconds": 70,
+        "youtube_url": "https://youtu.be/xrLBaE5QWUQ?t=1m10s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - The Old Death Star (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:04",
+        "timestamp_seconds": 64,
+        "youtube_url": "https://youtu.be/PuGxETS8unU?t=64",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Michael Giacchino - Hope (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:50",
+        "timestamp_seconds": 50,
+        "youtube_url": "https://youtu.be/RaEzKRngCyY?t=50s",
+        "film_code": "R"
+      },
+      {
+        "track_name": "Solo A Star Wars Story (2018): Battle of Mimban Complete HD",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:04",
+        "timestamp_seconds": 124,
+        "youtube_url": "https://youtu.be/BRM5HiHdjYI?t=124",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Obi-Wan Kenobi | Darth Vader speaks to Darth Sidious | Episode 6 Finale",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:04",
+        "timestamp_seconds": 64,
+        "youtube_url": "https://youtu.be/lYEchulzAc4?t=64",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams & Vienna Philharmonic \u2013 Williams: Imperial March (from \u201cStar Wars\u201d)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:53",
+        "timestamp_seconds": 53,
+        "youtube_url": "https://youtu.be/vsMWVW4xtwI?t=53",
+        "film_code": null
+      },
+      {
+        "track_name": "The Asteroid Field",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:14",
+        "timestamp_seconds": 14,
+        "youtube_url": "https://youtu.be/XNDEljd1cQI?t=14",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 02 Approaching The Death Star",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous/1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous_other.wav",
+        "file_name": "1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous_other.wav",
+        "timestamp": "02:25",
+        "timestamp_seconds": 145,
+        "youtube_url": "https://www.youtube.com/watch?v=AL2N4Bfl4Ec&feature=youtu.be&t=2m25s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "John Williams - Anthem of Evil (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:59",
+        "timestamp_seconds": 179,
+        "youtube_url": "https://youtu.be/oi9kKyPJ_00?t=179",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Michael Giacchino: Jyn's Path is Clear [Rogue One: A Star Wars Story Unreleased Music]",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:16",
+        "timestamp_seconds": 136,
+        "youtube_url": "https://youtu.be/X82mpJowp0c?t=136",
+        "film_code": "R"
+      },
+      {
+        "track_name": "The Asteroid Field",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:14",
+        "timestamp_seconds": 14,
+        "youtube_url": "https://youtu.be/XNDEljd1cQI?t=14",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 02 Approaching The Death Star",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous/1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous_other.wav",
+        "file_name": "1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous_other.wav",
+        "timestamp": "02:25",
+        "timestamp_seconds": 145,
+        "youtube_url": "https://www.youtube.com/watch?v=AL2N4Bfl4Ec&feature=youtu.be&t=2m25s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Kylo Ren First meet Poe Dameron : You talk first or I talk first",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:11",
+        "timestamp_seconds": 11,
+        "youtube_url": "https://youtu.be/yJbMdo0NyQw?t=11",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Anthem of Evil (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:59",
+        "timestamp_seconds": 179,
+        "youtube_url": "https://youtu.be/oi9kKyPJ_00?t=179",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/10_Imperial_March_Basic.musicxml",
+      "file_name": "10_Imperial_March_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "11a. HAN AND LEIA",
+    "motif_name": "HAN AND LEIA",
+    "appearances": [
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "V",
+      "timestamp": "0:03:32",
+      "cue_name": "Imperial Probe ",
+      "cue_number": "1m2"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars V: The Empire Strikes Back - Han Solo and the Princess (Love Theme)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:15",
+        "timestamp_seconds": 15,
+        "youtube_url": "https://youtu.be/1Hg-sWWmIVY?t=15s",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars V - The Rebel Fleet / End Title",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/11 - The Throne Room-End Title/11 - The Throne Room-End Title_other.wav",
+        "file_name": "11 - The Throne Room-End Title_other.wav",
+        "timestamp": "00:56",
+        "timestamp_seconds": 56,
+        "youtube_url": "https://youtu.be/DczKNnP2XoQ?t=56s",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Han Solo Returns (At the Court of Jabba the Hutt)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-05 Han Solo Returns/1-05 Han Solo Returns_other.wav",
+        "file_name": "1-05 Han Solo Returns_other.wav",
+        "timestamp": "02:24",
+        "timestamp_seconds": 144,
+        "youtube_url": "https://youtu.be/jjyhuWhOJQw?t=144",
+        "film_code": "S"
+      },
+      {
+        "track_name": "John Williams - Farewell and The Trip (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:47",
+        "timestamp_seconds": 107,
+        "youtube_url": "https://youtu.be/Itzm8-kcOAg?t=1m47s",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars The Last Jedi, Luke's 2nd Lesson [Full Scene HD]",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:53",
+        "timestamp_seconds": 53,
+        "youtube_url": "https://youtu.be/yepMuMoAKpA?t=53",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "Star Wars: The Rise Of Skywalker - Leia's Death Scene | 4K UHD",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=bLXgxlDOaXQ",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Han Solo and the Princess",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-05 Han Solo Returns/1-05 Han Solo Returns_other.wav",
+        "file_name": "1-05 Han Solo Returns_other.wav",
+        "timestamp": "00:53",
+        "timestamp_seconds": 53,
+        "youtube_url": "https://youtu.be/Sz8KJxs1RVc?t=53",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars V - The Rebel Fleet / End Title",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/11 - The Throne Room-End Title/11 - The Throne Room-End Title_other.wav",
+        "file_name": "11 - The Throne Room-End Title_other.wav",
+        "timestamp": "01:22",
+        "timestamp_seconds": 82,
+        "youtube_url": "https://youtu.be/DczKNnP2XoQ?t=82",
+        "film_code": "IV"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/11_Han___Leia_Basic.musicxml",
+      "file_name": "11_Han___Leia_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "12a. YODA",
+    "motif_name": "YODA",
+    "appearances": [
+      "I",
+      "II",
+      "III",
+      "V",
+      "VI",
+      "VIII",
+      "IX",
+      "M",
+      "B"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:49:43",
+      "cue_name": "Yoda Appears",
+      "cue_number": "5m2"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 15 Yoda and the Force",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation/1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation_other.wav",
+        "file_name": "1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation_other.wav",
+        "timestamp": "02:29",
+        "timestamp_seconds": 149,
+        "youtube_url": "https://youtu.be/pq9HRxGeM8w?t=2m29s",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars and The Phantom Menace Soundtrack-16 The High Council Meeting and Qui-Gon's Funeral",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/16 - The High Council Meeting and Qui-Gon_s Funeral/16 - The High Council Meeting and Qui-Gon_s Funeral_other.wav",
+        "file_name": "16 - The High Council Meeting and Qui-Gon_s Funeral_other.wav",
+        "timestamp": "00:59",
+        "timestamp_seconds": 59,
+        "youtube_url": "https://youtu.be/pefoJcg6JzQ?t=59s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode 2 Complete Score- \"Yoda Strikes Back\"",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:41",
+        "timestamp_seconds": 101,
+        "youtube_url": "https://youtu.be/ruudntibPbI?t=101",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Soundtrack Episode III ,Extended Edition : Swimming And Yoda's Farewell [1080p]",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:47",
+        "timestamp_seconds": 47,
+        "youtube_url": "https://youtu.be/b_vTttH1V38?t=47",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 10 Jedi Master Revealed Mynock Cave",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:59",
+        "timestamp_seconds": 59,
+        "youtube_url": "https://youtu.be/jxhsZ36CNRo?t=59s",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars VI - The Emperor Arrives / The Death of Yoda / Obi-Wan's Revelation",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation/1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation_other.wav",
+        "file_name": "1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation_other.wav",
+        "timestamp": "05:21",
+        "timestamp_seconds": 321,
+        "youtube_url": "https://youtu.be/wvnPabT9SAg?t=5m21s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "John Williams - The Sacred Jedi Texts (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:33",
+        "timestamp_seconds": 33,
+        "youtube_url": "https://youtu.be/m_8_DPH0hDM?t=33s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - Destiny of a Jedi (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "04:20",
+        "timestamp_seconds": 260,
+        "youtube_url": "https://youtu.be/x7EIJcVD1sY?t=260",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "The Story",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:01",
+        "timestamp_seconds": 121,
+        "youtube_url": "https://youtu.be/ZMf37EmSnmA?t=121",
+        "film_code": null
+      },
+      {
+        "track_name": "Life Lessons",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:25",
+        "timestamp_seconds": 85,
+        "youtube_url": "https://youtu.be/LOwOmfFEB4Q?t=85",
+        "film_code": null
+      },
+      {
+        "track_name": "Yoda's Theme",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode V - The Empire Strikes Back/CD2/02.Yoda's Theme/other.mp3",
+        "file_name": "other.mp3",
+        "timestamp": "00:58",
+        "timestamp_seconds": 58,
+        "youtube_url": "https://youtu.be/9C8J-jhMtRA?t=58",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 08 Luke's Nocturnal Visitor",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:32",
+        "timestamp_seconds": 32,
+        "youtube_url": "https://youtu.be/wp3Z6NhGMrg?t=32",
+        "film_code": "V"
+      },
+      {
+        "track_name": "John Williams - Reunion (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:17",
+        "timestamp_seconds": 77,
+        "youtube_url": "https://youtu.be/lXACbiZIl4M?t=77",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/12_Yoda_Theme_Basic.musicxml",
+      "file_name": "12_Yoda_Theme_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "12b. YODA",
+    "motif_name": "YODA",
+    "appearances": [
+      "V",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "V",
+      "timestamp": "0:56:10",
+      "cue_name": "Yoda's Entrance",
+      "cue_number": "5m3"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/12_Yoda_Theme_Basic.musicxml",
+      "file_name": "12_Yoda_Theme_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "13. DROIDS",
+    "motif_name": "DROIDS",
+    "appearances": [
+      "V",
+      "S"
+    ],
+    "first_appearance": {
+      "film": "V",
+      "timestamp": "0:06:44",
+      "cue_name": "Imperial Probe",
+      "cue_number": "1m2"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 02 Main Title /The Ice Planet / Hoth",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "06:30",
+        "timestamp_seconds": 390,
+        "youtube_url": "https://www.youtube.com/watch?v=bCzGXiAWuoI&feature=youtu.be&t=6m30s",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars VI - Main Title / Approaching the Death Star / Tatooine Rendezvous",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous/1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous_other.wav",
+        "file_name": "1-02 Main Title   Approaching the Death Star   Tatooine Rendezvous_other.wav",
+        "timestamp": "07:16",
+        "timestamp_seconds": 436,
+        "youtube_url": "https://youtu.be/VF1_ht6qVGE?t=436",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "John Williams - Han and Leia (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:58",
+        "timestamp_seconds": 178,
+        "youtube_url": "https://youtu.be/1mRB-6IwZMs?t=178",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars VI Return of The Jedi Soundtrack - The Battle of Endor 1",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-06 The Lightsaber   The Ewok Battle/2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "file_name": "2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "timestamp": "06:15",
+        "timestamp_seconds": 375,
+        "youtube_url": "https://youtu.be/6vDwqpzSrRU?t=375",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "12. Train Heist (Solo Complete Score)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/12 - The Immolation Scene/12 - The Immolation Scene_other.wav",
+        "file_name": "12 - The Immolation Scene_other.wav",
+        "timestamp": "06:32",
+        "timestamp_seconds": 392,
+        "youtube_url": "https://youtu.be/5Y2d-wy8ZDo?t=392",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars V - Main Title / The Ice Planet Hoth",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/01 - Star Wars Main Title and the Arrival at Naboo/01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "file_name": "01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "timestamp": "06:31",
+        "timestamp_seconds": 391,
+        "youtube_url": "https://youtu.be/HTFki2KgWUs?t=6m31s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "John Powell - Marauders Arrive (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:51",
+        "timestamp_seconds": 111,
+        "youtube_url": "https://youtu.be/8N5Lzq-F0qk?t=1m51s",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 14 Attacking a Star Destroyer",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=hS_BfjyVLtk&feature=youtu.be",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 14 Attacking a Star Destroyer",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=hS_BfjyVLtk&feature=youtu.be",
+        "film_code": "V"
+      },
+      {
+        "track_name": "\"Finding Kamino\" | Attack of the Clones Complete Score",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:10",
+        "timestamp_seconds": 70,
+        "youtube_url": "https://youtu.be/_eIhmlbEhHM?t=70",
+        "film_code": "II"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/13_Droids_Basic.musicxml",
+      "file_name": "13_Droids_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "14. BOBA FETT",
+    "motif_name": "BOBA FETT",
+    "appearances": [
+      "V",
+      "II"
+    ],
+    "first_appearance": {
+      "film": "V",
+      "timestamp": "1:06:13",
+      "cue_name": "Attack Position",
+      "cue_number": "7m2"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/14_Boba_Fett_Basic.musicxml",
+      "file_name": "14_Boba_Fett_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "15. CLOUD CITY",
+    "motif_name": "CLOUD CITY",
+    "appearances": [
+      "V"
+    ],
+    "first_appearance": {
+      "film": "V",
+      "timestamp": "1:21:31",
+      "cue_name": "Lando's Palace",
+      "cue_number": "8m3"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode V: The Empire Strikes Back (1980) Soundtrack 17 Lando's Palace",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:06",
+        "timestamp_seconds": 6,
+        "youtube_url": "https://www.youtube.com/watch?v=AgaVFby_GC4&feature=youtu.be&t=6s",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Star Wars V - Betrayal At Bespin",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:05",
+        "timestamp_seconds": 65,
+        "youtube_url": "https://youtu.be/Sp_QjUC9eNY?t=1m5s",
+        "film_code": null
+      },
+      {
+        "track_name": "Han Solo and the Princess",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-05 Han Solo Returns/1-05 Han Solo Returns_other.wav",
+        "file_name": "1-05 Han Solo Returns_other.wav",
+        "timestamp": "03:04",
+        "timestamp_seconds": 184,
+        "youtube_url": "https://youtu.be/zIQLjKJ2Yto?t=184",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Soundtrack Episode III , Extended Edition : Palpatine's Seduction (HD)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:46",
+        "timestamp_seconds": 106,
+        "youtube_url": "https://www.youtube.com/watch?v=4xfz2c17c8A&feature=youtu.be&t=106&ab_channel=Indes12",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars V - Betrayal At Bespin",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:05",
+        "timestamp_seconds": 65,
+        "youtube_url": "https://youtu.be/Sp_QjUC9eNY?t=1m5s",
+        "film_code": null
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "04:13",
+        "timestamp_seconds": 253,
+        "youtube_url": "https://youtu.be/BD3nhhpg7UI?t=253",
+        "film_code": null
+      },
+      {
+        "track_name": "The Forest Battle",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-12 The Forest Battle (concert suite)/2-12 The Forest Battle (concert suite)_other.wav",
+        "file_name": "2-12 The Forest Battle (concert suite)_other.wav",
+        "timestamp": "00:03",
+        "timestamp_seconds": 3,
+        "youtube_url": "https://youtu.be/ebCnaPzteZM?t=3",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "FALCON FLIGHT - from the STAR WARS: THE RISE OF SKYWALKER SOUNDTRACK.",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:43",
+        "timestamp_seconds": 103,
+        "youtube_url": "https://youtu.be/tBLBOPXYPBo?t=103",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Michael Giacchino - Rogue One (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:45",
+        "timestamp_seconds": 45,
+        "youtube_url": "https://youtu.be/Pf-cg9W5fQY?t=45",
+        "film_code": "R"
+      },
+      {
+        "track_name": "Star Wars: A New Hope Soundtrack - 09. Burning Homestead",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 1/09 - Burning Homestead/09 - Burning Homestead_other.mp3",
+        "file_name": "09 - Burning Homestead_other.mp3",
+        "timestamp": "00:47",
+        "timestamp_seconds": 47,
+        "youtube_url": "https://youtu.be/wolFdVti3nY?t=47",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "John Williams - The Battle of Crait (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "00:59",
+        "timestamp_seconds": 59,
+        "youtube_url": "https://youtu.be/YIIvAoHIsPQ?t=59",
+        "film_code": "VIII"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/15_Cloud_City_(Lando_s_Palace)_Basic.musicxml",
+      "file_name": "15_Cloud_City_(Lando_s_Palace)_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "16. DARK SIDE",
+    "motif_name": "DARK SIDE",
+    "appearances": [],
+    "first_appearance": {
+      "film": "",
+      "timestamp": "0:15:20",
+      "cue_name": "To \nHyperspace",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/16_Dark_Side_(Motif)_Basic.musicxml",
+      "file_name": "16_Dark_Side_(Motif)_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "17. EMPEROR",
+    "motif_name": "EMPEROR",
+    "appearances": [
+      "I",
+      "II",
+      "III",
+      "VI",
+      "VII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:38:17",
+      "cue_name": "The Emperor",
+      "cue_number": "4m5"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 21 The Lightsaber / The Ewok Battle",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-06 The Lightsaber   The Ewok Battle/2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "file_name": "2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "timestamp": "00:26",
+        "timestamp_seconds": 26,
+        "youtube_url": "https://www.youtube.com/watch?v=m1PAPNBEyw4&feature=youtu.be&t=26s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 04 Death Warrant for Qui Gon and Obi Wan",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=NEFx22Wf9Ps&list=PLeigbpMXUkYnWTpRB9JKrC-GCgJW8xjZU&index=5&t=0s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "\"Finale\" (Film Version) | Attack of the Clones Complete Score",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:31",
+        "timestamp_seconds": 91,
+        "youtube_url": "https://youtu.be/lj5rWxLjOxY?t=91",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars: ROTS Soundtrack -  I Am the Senate",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/12 - Love Pledge and the Arena/12 - Love Pledge and the Arena_other.wav",
+        "file_name": "12 - Love Pledge and the Arena_other.wav",
+        "timestamp": "01:29",
+        "timestamp_seconds": 89,
+        "youtube_url": "https://youtu.be/7UPRhRrcMfw?t=89",
+        "film_code": "II"
+      },
+      {
+        "track_name": "The Emperor",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode V - The Empire Strikes Back/CD1/06.The Asteroid Field/other.mp3",
+        "file_name": "other.mp3",
+        "timestamp": "00:22",
+        "timestamp_seconds": 22,
+        "youtube_url": "https://youtu.be/FvMtMfIr-sU?t=22",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Confrontation/Snoke Tortures Rey",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:04",
+        "timestamp_seconds": 184,
+        "youtube_url": "https://youtu.be/Qzfv_Tk1xjU?t=184",
+        "film_code": null
+      },
+      {
+        "track_name": "02. Falcon Flight (Star Wars: The Rise of Skywalker FYC Soundtrack)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)/02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)_other.wav",
+        "file_name": "02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)_other.wav",
+        "timestamp": "00:19",
+        "timestamp_seconds": 19,
+        "youtube_url": "https://youtu.be/dsdnT9xXtgU?t=19",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Star Wars - Jabba the Hutt Theme",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=Ln1_HB-gckw",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 32 Sebulba's Dirty Hand / Qui Gon's Pep Talk",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:55",
+        "timestamp_seconds": 55,
+        "youtube_url": "https://youtu.be/1JGN7tS8VOc?t=55s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars: A New Hope - All Jabbas",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/15 - A New Hope and End Credits/15 - A New Hope and End Credits_other.wav",
+        "file_name": "15 - A New Hope and End Credits_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=glrdWqils8Y",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of the Jedi Soundtrack 07 The Pit of Carkoon\u2044Sail Barge Assault Medley",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-07 The Pit of Carkoon   Sail Barge Assault/1-07 The Pit of Carkoon   Sail Barge Assault_other.wav",
+        "file_name": "1-07 The Pit of Carkoon   Sail Barge Assault_other.wav",
+        "timestamp": "02:47",
+        "timestamp_seconds": 167,
+        "youtube_url": "https://youtu.be/kEQi4Pvq8_g?t=167",
+        "film_code": "VI"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/17_Emperor_Basic.musicxml",
+      "file_name": "17_Emperor_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "18. JABBA",
+    "motif_name": "JABBA",
+    "appearances": [
+      "I",
+      "IV",
+      "VI"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:52:44",
+      "cue_name": "The Big Thaw",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/18_Jabba_Basic.musicxml",
+      "file_name": "18_Jabba_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "19a. EWOKS",
+    "motif_name": "EWOKS",
+    "appearances": [
+      "VI"
+    ],
+    "first_appearance": {
+      "film": "VI",
+      "timestamp": "1:03:50",
+      "cue_name": "Enter the Ewok",
+      "cue_number": "7m2"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars VI - Brother and Sister / Father and Son / The Fleet Enters Hyperspace / Heroic Ewok",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok/2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok_other.wav",
+        "file_name": "2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok_other.wav",
+        "timestamp": "09:55",
+        "timestamp_seconds": 595,
+        "youtube_url": "https://youtu.be/IZ_QtEfOWuo?t=9m55s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars VI - The Lightsaber / The Ewok Battle",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-06 The Lightsaber   The Ewok Battle/2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "file_name": "2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "timestamp": "04:00",
+        "timestamp_seconds": 240,
+        "youtube_url": "https://youtu.be/SaA1lxqv2Do?t=4m",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 11 Speeder Bike Chase, Land of the Ewoks",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-11 Speeder Bike Chase   Land of the Ewoks/1-11 Speeder Bike Chase   Land of the Ewoks_other.wav",
+        "file_name": "1-11 Speeder Bike Chase   Land of the Ewoks_other.wav",
+        "timestamp": "05:05",
+        "timestamp_seconds": 305,
+        "youtube_url": "https://www.youtube.com/watch?v=ZuJX-GfcjhM&feature=youtu.be&t=5m5s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 11 Speeder Bike Chase, Land of the Ewoks",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-11 Speeder Bike Chase   Land of the Ewoks/1-11 Speeder Bike Chase   Land of the Ewoks_other.wav",
+        "file_name": "1-11 Speeder Bike Chase   Land of the Ewoks_other.wav",
+        "timestamp": "05:05",
+        "timestamp_seconds": 305,
+        "youtube_url": "https://www.youtube.com/watch?v=ZuJX-GfcjhM&feature=youtu.be&t=5m5s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars VI - The Lightsaber / The Ewok Battle",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-06 The Lightsaber   The Ewok Battle/2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "file_name": "2-06 The Lightsaber   The Ewok Battle_other.wav",
+        "timestamp": "03:46",
+        "timestamp_seconds": 226,
+        "youtube_url": "https://youtu.be/SaA1lxqv2Do?t=226",
+        "film_code": "VI"
+      }
+    ]
+  },
+  {
+    "motif_id": "20. LUKE AND LEIA",
+    "motif_name": "LUKE AND LEIA",
+    "appearances": [
+      "VI",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "VI",
+      "timestamp": "1:20:24",
+      "cue_name": "Brother and Sister",
+      "cue_number": "9m2"
+    },
+    "tracks": [
+      {
+        "track_name": "SW VI Return of The Jedi Soundtrack - Brother and Sister-Father and Son-The Fleet Enters Hyperspace",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok/2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok_other.wav",
+        "file_name": "2-03 Brother and Sister   Father and Son   The Fleet Enters Hyperspace   Heroic Ewok_other.wav",
+        "timestamp": "00:56",
+        "timestamp_seconds": 56,
+        "youtube_url": "https://www.youtube.com/watch?v=qzb4kNB-0QM&feature=youtu.be&t=56s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars Episode VI: Return Of The Jedi (1983) Soundtrack 24 Leia's News / Light of the Force",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-09 Leia\u2019s News   Light of the Force/2-09 Leia\u2019s News   Light of the Force_other.wav",
+        "file_name": "2-09 Leia\u2019s News   Light of the Force_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=wRh8zJmzH_o&list=PLeigbpMXUkYmrSGaLGRnw1vtUwqIzKyJO&index=24&t=0s",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "John Williams - The Spark (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode V - The Empire Strikes Back/CD1/06.The Asteroid Field/other.mp3",
+        "file_name": "other.mp3",
+        "timestamp": "00:56",
+        "timestamp_seconds": 56,
+        "youtube_url": "https://youtu.be/ZHb9T6WvvW0?t=56s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - Reunion (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:40",
+        "timestamp_seconds": 160,
+        "youtube_url": "https://youtu.be/lXACbiZIl4M?t=160",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Into the Trap",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode V - The Empire Strikes Back/CD1/06.The Asteroid Field/other.mp3",
+        "file_name": "other.mp3",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=Rh0Xbbw9mQo&ab_channel=JohnWilliams-Topic",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Into the Trap",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode V - The Empire Strikes Back/CD1/06.The Asteroid Field/other.mp3",
+        "file_name": "other.mp3",
+        "timestamp": "01:02",
+        "timestamp_seconds": 62,
+        "youtube_url": "https://youtu.be/Rh0Xbbw9mQo?t=62",
+        "film_code": "V"
+      },
+      {
+        "track_name": "Michael Giacchino - Rogue One (From \"Rogue One: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:07",
+        "timestamp_seconds": 7,
+        "youtube_url": "https://youtu.be/Pf-cg9W5fQY?t=7",
+        "film_code": "R"
+      },
+      {
+        "track_name": "John Powell - Mine Mission (From \"Solo: A Star Wars Story\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:26",
+        "timestamp_seconds": 26,
+        "youtube_url": "https://youtu.be/PASIooN61Xo?t=26",
+        "film_code": "S"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/21_Luke___Leia_Basic.musicxml",
+      "file_name": "21_Luke___Leia_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "21. IT'S A TRAP!",
+    "motif_name": "IT'S A TRAP! ",
+    "appearances": [],
+    "first_appearance": {
+      "film": "",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/22_Its_A_Trap_Basic.musicxml",
+      "file_name": "22_Its_A_Trap_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "22. VICTORY FANFARE",
+    "motif_name": "VICTORY FANFARE",
+    "appearances": [
+      "VI",
+      "VI"
+    ],
+    "first_appearance": {
+      "film": "VI",
+      "timestamp": "0:35:39",
+      "cue_name": "",
+      "cue_number": "4m4"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/OriginalTriologyThemeFiles/Xmls/23_Victory_Fanfare_Basic.musicxml",
+      "file_name": "23_Victory_Fanfare_Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "23. REVELATIONS",
+    "motif_name": "REVELATIONS",
+    "appearances": [
+      "VI",
+      "V",
+      "II"
+    ],
+    "first_appearance": {
+      "film": "VI",
+      "timestamp": "0:02:30",
+      "cue_name": "Approaching the Death \nStar",
+      "cue_number": "1m3"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars VI - The Pit of Carkoon / Sail Barge Assault",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-07 The Pit of Carkoon   Sail Barge Assault/1-07 The Pit of Carkoon   Sail Barge Assault_other.wav",
+        "file_name": "1-07 The Pit of Carkoon   Sail Barge Assault_other.wav",
+        "timestamp": "05:02",
+        "timestamp_seconds": 302,
+        "youtube_url": "https://youtu.be/g0oNCRe11qY?t=302",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "Star Wars VI - The Battle of Endor III",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "05:31",
+        "timestamp_seconds": 331,
+        "youtube_url": "https://youtu.be/RT1763QZQvI?t=331",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars VI - The Battle of Endor III",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "05:31",
+        "timestamp_seconds": 331,
+        "youtube_url": "https://youtu.be/RT1763QZQvI?t=331",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "The Death of Yoda",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode IV - A New Hope/Disc 2/10 - The Battle of Yavin/10 - The Battle of Yavin_other.wav",
+        "file_name": "10 - The Battle of Yavin_other.wav",
+        "timestamp": "03:30",
+        "timestamp_seconds": 210,
+        "youtube_url": "https://youtu.be/cUp33yqhv7g?t=210",
+        "film_code": "IV"
+      },
+      {
+        "track_name": "Star Wars VI (The Complete Score) - Brother And Sister",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/12 - The Immolation Scene/12 - The Immolation Scene_other.wav",
+        "file_name": "12 - The Immolation Scene_other.wav",
+        "timestamp": "00:51",
+        "timestamp_seconds": 51,
+        "youtube_url": "https://youtu.be/0za0Ol8gTwM?t=51",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Yoda and the Force",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/04 - Yoda and the Younglings/04 - Yoda and the Younglings_other.wav",
+        "file_name": "04 - Yoda and the Younglings_other.wav",
+        "timestamp": "03:09",
+        "timestamp_seconds": 189,
+        "youtube_url": "https://youtu.be/Q1tc0zjGiGE?t=189",
+        "film_code": "II"
+      }
+    ]
+  },
+  {
+    "motif_id": "24a. YOUNG ANAKIN",
+    "motif_name": "YOUNG ANAKIN",
+    "appearances": [
+      "I",
+      "II",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:32:41",
+      "cue_name": "I\u2019m a Pilot, You Know",
+      "cue_number": "2m7"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 19 Padme Meets Anakin",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:19",
+        "timestamp_seconds": 19,
+        "youtube_url": "https://www.youtube.com/watch?v=ZHJUQjWlSMM&feature=youtu.be&t=19s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 24 Talk of PodRacing",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:55",
+        "timestamp_seconds": 115,
+        "youtube_url": "https://youtu.be/EVJ_gcAtE5I?t=115",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode 2 Complete Score- \"The Meeting of Anakin and Padm\u00e9\"",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:10",
+        "timestamp_seconds": 70,
+        "youtube_url": "https://youtu.be/9b1SxYvR434?t=70",
+        "film_code": null
+      },
+      {
+        "track_name": "Anakin's Nightmare",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/03 - Anakin_s Theme/03 - Anakin_s Theme_other.wav",
+        "file_name": "03 - Anakin_s Theme_other.wav",
+        "timestamp": "01:48",
+        "timestamp_seconds": 108,
+        "youtube_url": "https://youtu.be/w7aC5B5Sgu8?t=108",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Anakin's Theme",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/03 - Anakin_s Theme/03 - Anakin_s Theme_other.wav",
+        "file_name": "03 - Anakin_s Theme_other.wav",
+        "timestamp": "01:44",
+        "timestamp_seconds": 104,
+        "youtube_url": "https://youtu.be/WUC7MgkOgKA?t=104",
+        "film_code": "I"
+      },
+      {
+        "track_name": "\"Are You A Jedi?\" | The Phantom Menace Complete Score",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:55",
+        "timestamp_seconds": 115,
+        "youtube_url": "https://youtu.be/bhmf9wGzCTo?t=115",
+        "film_code": "I"
+      }
+    ]
+  },
+  {
+    "motif_id": "25a. DUEL OF  THE FATES",
+    "motif_name": "DUEL OF  THE FATES",
+    "appearances": [
+      "I",
+      "II",
+      "III",
+      "IX",
+      "S"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "1:46:36",
+      "cue_name": "Lazer Fight\u201d  \n(6m2)  Key Features : Two-measure basic idea \u2014a perfect musical palindrome with a \nstepwise ascent and descent f rom 1 to 5 (with octave -displaced 5). Static or very \nslow-moving harmonic rhythm, usu. prolonging the tonic. May appear fragmented or \nclose imitation with itself. Strictly instrumental: woodwinds, brass.  \n \n \n25b-c. DOTF continued . \n \nTwo further  components of DotF , just as \nsalient and detachable as 25a. Ostinato  \n(25b)  may undergird other motifs or ris e to \nforeground. Chant  (25c)  a fierce choral \nmantra that employs loose Sanskrit \ntranslation of Robert Graves poem, revisited \nin a number of (unused)  new cues in TROS. \nTogether,  25a-c meant to suggest an archaic , \nritualized \u201c spiritual contest\u201d b/t good  & evil.  \n  \nUsed In:  I, II, III, IX, S First Usage: I [1:50:18]  \n",
+      "cue_number": "6m2"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 51 The Battle Begins",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:04",
+        "timestamp_seconds": 4,
+        "youtube_url": "https://www.youtube.com/watch?v=2ACgJNC7_CA&feature=youtu.be&t=4s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode 1 Soundtrack- The Sith Spacecraft And The Droid Battle",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/05 - The Sith Spacecraft and the Droid Battle/05 - The Sith Spacecraft and the Droid Battle_other.wav",
+        "file_name": "05 - The Sith Spacecraft and the Droid Battle_other.wav",
+        "timestamp": "01:09",
+        "timestamp_seconds": 69,
+        "youtube_url": "https://youtu.be/ryohHTpxpOI?t=1m9s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode II Soundtrack- Return To Tatooine",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/10 - Return to Tatooine/10 - Return to Tatooine_other.wav",
+        "file_name": "10 - Return to Tatooine_other.wav",
+        "timestamp": "03:38",
+        "timestamp_seconds": 218,
+        "youtube_url": "https://youtu.be/LYaEXqlxw18?t=3m38s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Soundtrack Episode III , Extended Edition : Battle Of The Heroes And Duel Of The Fates",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/03 - Battle of the Heroes/03 - Battle of the Heroes_other.wav",
+        "file_name": "03 - Battle of the Heroes_other.wav",
+        "timestamp": "04:26",
+        "timestamp_seconds": 266,
+        "youtube_url": "https://youtu.be/IAxpmkEHpzc?t=266",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Solo: A Star Wars Story - Exclusive Darth Maul Clip",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=FxVoZYZQeBU",
+        "film_code": "S"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 55 The Duel Begins",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:03",
+        "timestamp_seconds": 3,
+        "youtube_url": "https://www.youtube.com/watch?v=XzuqUl1zW_k&feature=youtu.be&t=3s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 55 The Duel Begins",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:15",
+        "timestamp_seconds": 15,
+        "youtube_url": "https://www.youtube.com/watch?v=XzuqUl1zW_k&feature=youtu.be&t=15s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 55 The Duel Begins",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:03",
+        "timestamp_seconds": 3,
+        "youtube_url": "https://www.youtube.com/watch?v=XzuqUl1zW_k&feature=youtu.be&t=3s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 55 The Duel Begins",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:42",
+        "timestamp_seconds": 42,
+        "youtube_url": "https://youtu.be/XzuqUl1zW_k?t=42s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode II Soundtrack- Return To Tatooine",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/10 - Return to Tatooine/10 - Return to Tatooine_other.wav",
+        "file_name": "10 - Return to Tatooine_other.wav",
+        "timestamp": "03:50",
+        "timestamp_seconds": 230,
+        "youtube_url": "https://youtu.be/LYaEXqlxw18?t=3m50s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Soundtrack Episode III , Extended Edition : Battle Of The Heroes And Duel Of The Fates",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/03 - Battle of the Heroes/03 - Battle of the Heroes_other.wav",
+        "file_name": "03 - Battle of the Heroes_other.wav",
+        "timestamp": "04:26",
+        "timestamp_seconds": 266,
+        "youtube_url": "https://youtu.be/IAxpmkEHpzc?t=266",
+        "film_code": "III"
+      },
+      {
+        "track_name": "John Williams - Approaching the Throne (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:52",
+        "timestamp_seconds": 232,
+        "youtube_url": "https://youtu.be/eDbx0k-162E?t=232",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "Solo: A Star Wars Story - Exclusive Darth Maul Clip",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=FxVoZYZQeBU",
+        "film_code": "S"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/8 Duel of the Fates Ostinato Basic.musicxml",
+      "file_name": "8 Duel of the Fates Ostinato Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "26. DROID MARCH",
+    "motif_name": "DROID MARCH",
+    "appearances": [
+      "I",
+      "II",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:10:11",
+      "cue_name": "Droid Invasion",
+      "cue_number": "1m6"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 07 The Droid Invasion",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:24",
+        "timestamp_seconds": 24,
+        "youtube_url": "https://www.youtube.com/watch?v=EDjyGb7Lkms&feature=youtu.be&t=24s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars and The Phantom Menace Soundtrack-14 The Droid Invasion and The Appearance of Darth Maul",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/14 - The Droid Invasion and the Appearance of Darth Maul/14 - The Droid Invasion and the Appearance of Darth Maul_other.wav",
+        "file_name": "14 - The Droid Invasion and the Appearance of Darth Maul_other.wav",
+        "timestamp": "00:40",
+        "timestamp_seconds": 40,
+        "youtube_url": "https://youtu.be/Ts0b3jtCOho?t=40s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars and The Attack of hte Clones Soundtrack-09 Bounty Hunter's Pursuit",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/09 - Bounty Hunter_s Pursuit/09 - Bounty Hunter_s Pursuit_other.wav",
+        "file_name": "09 - Bounty Hunter_s Pursuit_other.wav",
+        "timestamp": "03:05",
+        "timestamp_seconds": 185,
+        "youtube_url": "https://youtu.be/0MEwlgYLLmU?t=3m5s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:33",
+        "timestamp_seconds": 93,
+        "youtube_url": "https://youtu.be/JkN55Y_xNTQ?t=93",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 16 Enter Darth Maul",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:36",
+        "timestamp_seconds": 36,
+        "youtube_url": "https://www.youtube.com/watch?v=KaTCJvwC5JU&feature=youtu.be&t=36s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 16 Enter Darth Maul",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:36",
+        "timestamp_seconds": 36,
+        "youtube_url": "https://www.youtube.com/watch?v=KaTCJvwC5JU&feature=youtu.be&t=36s",
+        "film_code": "I"
+      }
+    ]
+  },
+  {
+    "motif_id": "27. DARTH MAUL",
+    "motif_name": "DARTH MAUL",
+    "appearances": [
+      "I"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "0:27:43",
+      "cue_name": "Enter Darth Maul",
+      "cue_number": "2m4"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/2 Darth Maul Basic.musicxml",
+      "file_name": "2 Darth Maul Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "28. JAR JAR",
+    "motif_name": "JAR JAR",
+    "appearances": [
+      "I",
+      "I",
+      "I",
+      "K",
+      "S",
+      "R"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": []
+  },
+  {
+    "motif_id": "29. QUI GON",
+    "motif_name": "QUI GON",
+    "appearances": [
+      "I"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "1:11:08",
+      "cue_name": "Anakin is Free",
+      "cue_number": "4m5"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 17 The Arrival at Tatooine",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/01 - Star Wars Main Title and the Arrival at Naboo/01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "file_name": "01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "timestamp": "00:06",
+        "timestamp_seconds": 6,
+        "youtube_url": "https://www.youtube.com/watch?v=QQc8a_LVhGw&feature=youtu.be&t=6s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 17 The Arrival at Tatooine",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/01 - Star Wars Main Title and the Arrival at Naboo/01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "file_name": "01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "timestamp": "00:06",
+        "timestamp_seconds": 6,
+        "youtube_url": "https://www.youtube.com/watch?v=QQc8a_LVhGw&feature=youtu.be&t=6s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars (The Ultimate Edition) - Qui-Gon and Darth Maul Meet",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:38",
+        "timestamp_seconds": 38,
+        "youtube_url": "https://youtu.be/D2smg-fUg0U?t=38s",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode 1 Complete Score | \"End of Darth Maul\" (Reconstructed #2)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:59",
+        "timestamp_seconds": 59,
+        "youtube_url": "https://youtu.be/EXVM-6N-n74?t=59",
+        "film_code": null
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/5 Qui Gon Basic.musicxml",
+      "file_name": "5 Qui Gon Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "30. SHMI",
+    "motif_name": "SHMI",
+    "appearances": [
+      "I",
+      "II",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "1:15:00",
+      "cue_name": "Anakin is Free",
+      "cue_number": "4m5 "
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 36 Anakin is Free",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:54",
+        "timestamp_seconds": 234,
+        "youtube_url": "https://www.youtube.com/watch?v=34Xf97_cU_o&feature=youtu.be&t=3m54s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Revenge of the Sith - Palpatine revealed himself as a Sith Lord.",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:55",
+        "timestamp_seconds": 175,
+        "youtube_url": "https://youtu.be/4Ft_rddJd4A?t=175",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Minority Report (OST) - Sean by Agatha",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:14",
+        "timestamp_seconds": 14,
+        "youtube_url": "https://youtu.be/Rz2tzq-NUL4?t=14",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 36 Anakin is Free",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:54",
+        "timestamp_seconds": 234,
+        "youtube_url": "https://www.youtube.com/watch?v=34Xf97_cU_o&feature=youtu.be&t=3m54s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars and The Attack of the Clones Soundtrack-11 The Tusken Camp-The Homestead",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/11 - The Tusken Camp and the Homestead/11 - The Tusken Camp and the Homestead_other.wav",
+        "file_name": "11 - The Tusken Camp and the Homestead_other.wav",
+        "timestamp": "01:28",
+        "timestamp_seconds": 88,
+        "youtube_url": "https://youtu.be/WulDIz5X9v4?t=1m28s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Palpatine's Teachings",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/06 - Palpatine_s Teachings/06 - Palpatine_s Teachings_other.wav",
+        "file_name": "06 - Palpatine_s Teachings_other.wav",
+        "timestamp": "02:08",
+        "timestamp_seconds": 128,
+        "youtube_url": "https://youtu.be/3gqnXj5RngA?t=128",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars Episode I: The Phantom Menace (1999) 65 The Funeral of Qui gon",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:07",
+        "timestamp_seconds": 7,
+        "youtube_url": "https://www.youtube.com/watch?v=HUjo_1btxyE&feature=youtu.be&t=7s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars and The Phantom Menace Soundtrack-16 The High Council Meeting and Qui-Gon's Funeral",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/16 - The High Council Meeting and Qui-Gon_s Funeral/16 - The High Council Meeting and Qui-Gon_s Funeral_other.wav",
+        "file_name": "16 - The High Council Meeting and Qui-Gon_s Funeral_other.wav",
+        "timestamp": "02:28",
+        "timestamp_seconds": 148,
+        "youtube_url": "https://youtu.be/pefoJcg6JzQ?t=2m28s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Star Wars Episode III - Revenge of the Sith - Padm\u00e9's Funeral and Ending - 4K ULTRA HD.",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/05 - The Sith Spacecraft and the Droid Battle/05 - The Sith Spacecraft and the Droid Battle_other.wav",
+        "file_name": "05 - The Sith Spacecraft and the Droid Battle_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=6C--Zttls8I",
+        "film_code": "III"
+      }
+    ]
+  },
+  {
+    "motif_id": "31. FUNERAL",
+    "motif_name": "FUNERAL",
+    "appearances": [
+      "I",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "I",
+      "timestamp": "2:07:17",
+      "cue_name": "",
+      "cue_number": "7m1"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/7 Funeral Basic.musicxml",
+      "file_name": "7 Funeral Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "32a. ANAKIN AND PADME",
+    "motif_name": "ANAKIN AND PADME",
+    "appearances": [
+      "II",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "II",
+      "timestamp": "0:29:06",
+      "cue_name": "Palpatine's Plotting",
+      "cue_number": "2m2"
+    },
+    "tracks": [
+      {
+        "track_name": "12. Love Pledge And the Arena - John Williams",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/12 - Love Pledge and the Arena/12 - Love Pledge and the Arena_other.wav",
+        "file_name": "12 - Love Pledge and the Arena_other.wav",
+        "timestamp": "01:28",
+        "timestamp_seconds": 88,
+        "youtube_url": "https://www.youtube.com/watch?v=W3Lh4Pyxxns&feature=youtu.be&t=1m28s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Love Pledge and the Arena",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/12 - Love Pledge and the Arena/12 - Love Pledge and the Arena_other.wav",
+        "file_name": "12 - Love Pledge and the Arena_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=QU2HpDUlUzY",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Anakin's Dream",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/02 - Anakin_s Dream/02 - Anakin_s Dream_other.wav",
+        "file_name": "02 - Anakin_s Dream_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=2MqBvcjxJ70&list=OLAK5uy_nalDXF9q-ywNHR4dhf4zB5LzCDBay_ink",
+        "film_code": "III"
+      },
+      {
+        "track_name": "12. Love Pledge And the Arena - John Williams",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/12 - Love Pledge and the Arena/12 - Love Pledge and the Arena_other.wav",
+        "file_name": "12 - Love Pledge and the Arena_other.wav",
+        "timestamp": "00:40",
+        "timestamp_seconds": 40,
+        "youtube_url": "https://youtu.be/W3Lh4Pyxxns?t=40",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Episode 2 Soundtrack- Love Pledge And The Arena",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/12 - Love Pledge and the Arena/12 - Love Pledge and the Arena_other.wav",
+        "file_name": "12 - Love Pledge and the Arena_other.wav",
+        "timestamp": "00:40",
+        "timestamp_seconds": 40,
+        "youtube_url": "https://youtu.be/QEaoh_NeZV8?t=40",
+        "film_code": "II"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/9 Anakin and Padme Basic.musicxml",
+      "file_name": "9 Anakin and Padme Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "33. CONSPIRACY",
+    "motif_name": "CONSPIRACY",
+    "appearances": [
+      "II"
+    ],
+    "first_appearance": {
+      "film": "II",
+      "timestamp": "0:04:21",
+      "cue_name": "Thwarted Attempt",
+      "cue_number": "1m3"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Main Title and Ambush on Coruscant",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/01 - Star Wars Main Title and Ambush on Coruscant/01 - Star Wars Main Title and Ambush on Coruscant_other.wav",
+        "file_name": "01 - Star Wars Main Title and Ambush on Coruscant_other.wav",
+        "timestamp": "02:59",
+        "timestamp_seconds": 179,
+        "youtube_url": "https://youtu.be/de7Ny4oe4Sg?t=179",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Main Title and Ambush on Coruscant",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/01 - Star Wars Main Title and Ambush on Coruscant/01 - Star Wars Main Title and Ambush on Coruscant_other.wav",
+        "file_name": "01 - Star Wars Main Title and Ambush on Coruscant_other.wav",
+        "timestamp": "02:59",
+        "timestamp_seconds": 179,
+        "youtube_url": "https://youtu.be/de7Ny4oe4Sg?t=179",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Episode 2 Complete Score- \"Finding Kamino\" (Film Version)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:14",
+        "timestamp_seconds": 14,
+        "youtube_url": "https://youtu.be/uthJxkZo9vM?t=14",
+        "film_code": null
+      },
+      {
+        "track_name": "Return to Tatooine",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/10 - Return to Tatooine/10 - Return to Tatooine_other.wav",
+        "file_name": "10 - Return to Tatooine_other.wav",
+        "timestamp": "01:22",
+        "timestamp_seconds": 82,
+        "youtube_url": "https://youtu.be/4x5xORsCKYs?t=82",
+        "film_code": "II"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:28",
+        "timestamp_seconds": 88,
+        "youtube_url": "https://youtu.be/PUq4lbozqVs?t=88",
+        "film_code": null
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/10 Conspiracy Basic.musicxml",
+      "file_name": "10 Conspiracy Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "34. MYSTERY",
+    "motif_name": "MYSTERY",
+    "appearances": [
+      "II",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "II",
+      "timestamp": "0:34:45",
+      "cue_name": "Library Scene",
+      "cue_number": "2m5"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/13 Mystery.musicxml",
+      "file_name": "13 Mystery.musicxml"
+    }
+  },
+  {
+    "motif_id": "35. PASTORAL COURTSHIP",
+    "motif_name": "PASTORAL COURTSHIP",
+    "appearances": [],
+    "first_appearance": {
+      "film": "",
+      "timestamp": "",
+      "cue_name": "",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/12 Pastoral Courtship.musicxml",
+      "file_name": "12 Pastoral Courtship.musicxml"
+    }
+  },
+  {
+    "motif_id": "7. A",
+    "motif_name": "A",
+    "appearances": [
+      "II"
+    ],
+    "first_appearance": {
+      "film": "II",
+      "timestamp": "0:47:48",
+      "cue_name": "The Meadow Scene",
+      "cue_number": "3m5"
+    },
+    "tracks": [
+      {
+        "track_name": "Anakin and Padm\u00e9",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/06 - Anakin and Padme\u0301/06 - Anakin and Padme\u0301_other.wav",
+        "file_name": "06 - Anakin and Padme\u0301_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=frEjVrDXmKI",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Episode 2 Soundtrack- The Meadow Picnic",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/08 - The Meadow Picnic/08 - The Meadow Picnic_other.wav",
+        "file_name": "08 - The Meadow Picnic_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=mn2b4Gx2b-4",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Across the Stars (Love Theme from \"Star Wars: Attack of the Clones\")",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)/02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)_other.wav",
+        "file_name": "02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)_other.wav",
+        "timestamp": "02:00",
+        "timestamp_seconds": 120,
+        "youtube_url": "https://youtu.be/7wMiMDBHnJ0?t=120",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars and The Attack of the Clones Soundtrack-06 Anakin and Padme",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/14 - The Birth of the Twins and Padme\u0301_s Destiny/14 - The Birth of the Twins and Padme\u0301_s Destiny_other.wav",
+        "file_name": "14 - The Birth of the Twins and Padme\u0301_s Destiny_other.wav",
+        "timestamp": "02:16",
+        "timestamp_seconds": 136,
+        "youtube_url": "https://youtu.be/q2E-WMXXyEY?t=2m16s",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Star Wars Episode 3 Complete Score- \"Revisiting Padm\u00e9\"",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=N31otsk22k4&list=PLonU6sZXHsfqtt1Uzv_O9-q7qjNr596Qc&index=14&t=0s",
+        "film_code": null
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/SequelTriologyThemeFiles/Xmls/1_KyloA.musicxml",
+      "file_name": "1_KyloA.musicxml"
+    }
+  },
+  {
+    "motif_id": "36. GLOOMY COURTSHIP",
+    "motif_name": "GLOOMY COURTSHIP",
+    "appearances": [
+      "II",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "II",
+      "timestamp": "0:09:50",
+      "cue_name": "She Hardly Recognized \nMe",
+      "cue_number": "1m5"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/11 Gloomy Courtship.musicxml",
+      "file_name": "11 Gloomy Courtship.musicxml"
+    }
+  },
+  {
+    "motif_id": "37a. DESCENT (DIES IRAE)",
+    "motif_name": "DESCENT (DIES IRAE)",
+    "appearances": [
+      "II",
+      "III"
+    ],
+    "first_appearance": {
+      "film": "II",
+      "timestamp": "0:54:22",
+      "cue_name": "The Dinner Scene",
+      "cue_number": "3m7"
+    },
+    "tracks": [
+      {
+        "track_name": "\"The Dinner Scene\" | Attack of the Clones Complete Score",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)/02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)_other.wav",
+        "file_name": "02 - Across the Stars (Love Theme from _Star Wars_ Attack of the Clones_)_other.wav",
+        "timestamp": "01:43",
+        "timestamp_seconds": 103,
+        "youtube_url": "https://youtu.be/YmkQG_MrtSs?t=103",
+        "film_code": "II"
+      },
+      {
+        "track_name": "Episode 2 - 5M1b Anakin Changes",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/2-04 Emperor\u2019s Throne Room/2-04 Emperor\u2019s Throne Room_other.wav",
+        "file_name": "2-04 Emperor\u2019s Throne Room_other.wav",
+        "timestamp": "00:27",
+        "timestamp_seconds": 27,
+        "youtube_url": "https://youtu.be/KxD3BWpW_Lk?t=27",
+        "film_code": "VI"
+      },
+      {
+        "track_name": "\"Lament\" | Revenge of the Sith Complete Score",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/01 - Star Wars and the Revenge of the Sith/01 - Star Wars and the Revenge of the Sith_other.wav",
+        "file_name": "01 - Star Wars and the Revenge of the Sith_other.wav",
+        "timestamp": "01:38",
+        "timestamp_seconds": 98,
+        "youtube_url": "https://youtu.be/kq_vg6swpDA?t=98",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars - Lament Theme",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=ygnGh2jVKqs&ab_channel=FlashMusic",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Episode 3 Complete Score | \"Padm\u00e9's Visit\"",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "03:01",
+        "timestamp_seconds": 181,
+        "youtube_url": "https://youtu.be/IDk-KvVh628?t=181",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Last Jedi (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:52",
+        "timestamp_seconds": 52,
+        "youtube_url": "https://youtu.be/U9e5JcKxHaA?t=52",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - The Force Is with You (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:03",
+        "timestamp_seconds": 3,
+        "youtube_url": "https://youtu.be/kIr-3GYLZMM?t=3",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/16 Descent.musicxml",
+      "file_name": "16 Descent.musicxml"
+    }
+  },
+  {
+    "motif_id": "37b. DESCENT (LAMENT)",
+    "motif_name": "DESCENT (LAMENT)",
+    "appearances": [
+      "III",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "III",
+      "timestamp": "1:01:05",
+      "cue_name": "Lament ",
+      "cue_number": "5m3"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/16 Descent.musicxml",
+      "file_name": "16 Descent.musicxml"
+    }
+  },
+  {
+    "motif_id": "38a. BATTLE OF THE  HEROES",
+    "motif_name": "BATTLE OF THE  HEROES",
+    "appearances": [
+      "III",
+      "VIII"
+    ],
+    "first_appearance": {
+      "film": "III",
+      "timestamp": "1:47:53",
+      "cue_name": "Heroes Collide",
+      "cue_number": "6m4"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode III-Revenge of the Sith Track 3 - Battle of the Heroes",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/03 - Battle of the Heroes/03 - Battle of the Heroes_other.wav",
+        "file_name": "03 - Battle of the Heroes_other.wav",
+        "timestamp": "00:31",
+        "timestamp_seconds": 31,
+        "youtube_url": "https://youtu.be/rZ1xVKyEEeg?t=31s",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars Episode III-Revenge of the Sith Track 9 - Anakin vs. Obi-wan",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/01 - Star Wars and the Revenge of the Sith/01 - Star Wars and the Revenge of the Sith_other.wav",
+        "file_name": "01 - Star Wars and the Revenge of the Sith_other.wav",
+        "timestamp": "00:07",
+        "timestamp_seconds": 7,
+        "youtube_url": "https://youtu.be/YHfAIoc2XbA?t=7s",
+        "film_code": "III"
+      },
+      {
+        "track_name": "John Williams - Main Title and Escape (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode II - Attack of the Clones/01 - Star Wars Main Title and Ambush on Coruscant/01 - Star Wars Main Title and Ambush on Coruscant_other.wav",
+        "file_name": "01 - Star Wars Main Title and Ambush on Coruscant_other.wav",
+        "timestamp": "06:15",
+        "timestamp_seconds": 375,
+        "youtube_url": "https://www.youtube.com/watch?v=u_OO9taOvG8&t=375s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "Star Wars Episode III-Revenge of the Sith Track 3 - Battle of the Heroes",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/03 - Battle of the Heroes/03 - Battle of the Heroes_other.wav",
+        "file_name": "03 - Battle of the Heroes_other.wav",
+        "timestamp": "01:22",
+        "timestamp_seconds": 82,
+        "youtube_url": "https://youtu.be/rZ1xVKyEEeg?t=82",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars Episode III-Revenge of the Sith Track 9 - Anakin vs. Obi-wan",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/01 - Star Wars and the Revenge of the Sith/01 - Star Wars and the Revenge of the Sith_other.wav",
+        "file_name": "01 - Star Wars and the Revenge of the Sith_other.wav",
+        "timestamp": "02:37",
+        "timestamp_seconds": 157,
+        "youtube_url": "https://youtu.be/YHfAIoc2XbA?t=157",
+        "film_code": "III"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/14 Battle of the Heroes Theme Basic.musicxml",
+      "file_name": "14 Battle of the Heroes Theme Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "39. GENERAL GRIEVOUS",
+    "motif_name": "GENERAL GRIEVOUS",
+    "appearances": [
+      "III"
+    ],
+    "first_appearance": {
+      "film": "III",
+      "timestamp": "0:08:18",
+      "cue_name": "Grievous Travels to \nPalpatine",
+      "cue_number": "2m5"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars Episode III-Revenge of the Sith Track 1 - Star Wars and Revenge of the Sith",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode VI -  Return of the Jedi - 2 Disc/1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation/1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation_other.wav",
+        "file_name": "1-08 The Emperor Arrives   The Death of Yoda   Obi-Wan\u2019s Revelation_other.wav",
+        "timestamp": "04:46",
+        "timestamp_seconds": 286,
+        "youtube_url": "https://www.youtube.com/watch?v=Ia5-JGVeDkw&feature=youtu.be&t=4m46s",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Grievous Speaks to Lord Sidious",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode III - Revenge of the Sith/13 - Grievous Speaks to Lord Sidious/13 - Grievous Speaks to Lord Sidious_other.wav",
+        "file_name": "13 - Grievous Speaks to Lord Sidious_other.wav",
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=k_OTAM5Yu3M",
+        "film_code": "III"
+      },
+      {
+        "track_name": "Star Wars: \"Another Happy Landing\" by John Williams (Score Reduction and Analysis)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:28",
+        "timestamp_seconds": 28,
+        "youtube_url": "https://youtu.be/O6RJHJjiCzs?t=28",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars Soundtrack Episode III , Extended Edition : Arrival At Utapau",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:18",
+        "timestamp_seconds": 18,
+        "youtube_url": "https://youtu.be/DITknhZIgQc?t=18",
+        "film_code": "III"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/15 General Grievous Basic.musicxml",
+      "file_name": "15 General Grievous Basic.musicxml"
+    }
+  },
+  {
+    "motif_id": "40. HAPPY LANDINGS",
+    "motif_name": "HAPPY LANDINGS",
+    "appearances": [
+      "III"
+    ],
+    "first_appearance": {
+      "film": "III",
+      "timestamp": "",
+      "cue_name": "Another \nHappy Landing ",
+      "cue_number": "2m3"
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/PrequelTriologyThemeFiles/Xmls/17 Happy Landing.musicxml",
+      "file_name": "17 Happy Landing.musicxml"
+    }
+  },
+  {
+    "motif_id": "41. KYLO REN A (AGGRESSIVE)",
+    "motif_name": "KYLO REN A (AGGRESSIVE)",
+    "appearances": [],
+    "first_appearance": {
+      "film": "",
+      "timestamp": "0:06:11",
+      "cue_name": "The Arrival of Kylo Ren",
+      "cue_number": "1m3"
+    },
+    "tracks": [
+      {
+        "track_name": "John Williams - Main Title and The Attack on the Jakku Village (Audio Only)",
+        "file_path": "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/Star Wars - Episode I - The Phantom Menace/01 - Star Wars Main Title and the Arrival at Naboo/01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "file_name": "01 - Star Wars Main Title and the Arrival at Naboo_other.wav",
+        "timestamp": "04:19",
+        "timestamp_seconds": 259,
+        "youtube_url": "https://www.youtube.com/watch?v=y8ac1Qg-r-8&feature=youtu.be&t=4m19s",
+        "film_code": "I"
+      },
+      {
+        "track_name": "Parents - from the STAR WARS: THE RISE OF SKYWALKER SOUNDTRACK.",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:19",
+        "timestamp_seconds": 79,
+        "youtube_url": "https://youtu.be/ESfDcpO7g0I?t=79",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "John Williams - The Ways of the Force (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:21",
+        "timestamp_seconds": 81,
+        "youtube_url": "https://youtu.be/ACVE5nYGJxI?t=1m21s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Peace and Purpose (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:09",
+        "timestamp_seconds": 69,
+        "youtube_url": "https://youtu.be/8FviFi42Y4c?t=1m9s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - The Final Saber Duel (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:39",
+        "timestamp_seconds": 39,
+        "youtube_url": "https://youtu.be/XTdwliaC-R0?t=39",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "John Williams - The Abduction (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:12",
+        "timestamp_seconds": 12,
+        "youtube_url": "https://www.youtube.com/watch?app=desktop&t=12s&v=IUs88IY1A00&feature=youtu.be",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Ways of the Force (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:07",
+        "timestamp_seconds": 67,
+        "youtube_url": "https://youtu.be/ACVE5nYGJxI?t=1m7s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Revisiting Snoke (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:49",
+        "timestamp_seconds": 49,
+        "youtube_url": "https://youtu.be/xrLBaE5QWUQ?t=49s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - Journey to Exegol (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:23",
+        "timestamp_seconds": 143,
+        "youtube_url": "https://youtu.be/TkHVhZWJSfk?t=143",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/SequelTriologyThemeFiles/Xmls/1_KyloA.musicxml",
+      "file_name": "1_KyloA.musicxml"
+    }
+  },
+  {
+    "motif_id": "42. KYLO REN B (HESITANT)",
+    "motif_name": "KYLO REN B (HESITANT)",
+    "appearances": [
+      "VII",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "VII",
+      "timestamp": "0:28:25",
+      "cue_name": "Finn \u2019s Trek",
+      "cue_number": ""
+    },
+    "tracks": [],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/SequelTriologyThemeFiles/Xmls/2_KyloB.musicxml",
+      "file_name": "2_KyloB.musicxml"
+    }
+  },
+  {
+    "motif_id": "43. KYLO REN C (MENACING) \n/ FIRST ORDER",
+    "motif_name": "KYLO REN C (MENACING) \n/ FIRST ORDER",
+    "appearances": [
+      "VII",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "VII",
+      "timestamp": "0:09:32",
+      "cue_name": "The Arrival  of Kylo Ren ",
+      "cue_number": "1m4 R"
+    },
+    "tracks": [
+      {
+        "track_name": "Star Wars: The Force Awakens Complete Score (SFX) - Jedi Mind Trick",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:13",
+        "timestamp_seconds": 13,
+        "youtube_url": "https://www.youtube.com/watch?app=desktop&v=3CN0yIQD_1Y&feature=youtu.be&t=13s",
+        "film_code": "VII"
+      },
+      {
+        "track_name": "Star Wars: The Force Awakens Complete Score (SFX) - Jedi Mind Trick",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:13",
+        "timestamp_seconds": 13,
+        "youtube_url": "https://www.youtube.com/watch?app=desktop&v=3CN0yIQD_1Y&feature=youtu.be&t=13s",
+        "film_code": "VII"
+      },
+      {
+        "track_name": "Rey learns Jedi Mind Trick - Star Wars VII The Force Awakens (with Daniel Craig as Storm Trooper)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=fffv200a3CM",
+        "film_code": "VII"
+      },
+      {
+        "track_name": "John Williams - Who Are You? (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:14",
+        "timestamp_seconds": 74,
+        "youtube_url": "https://youtu.be/5MEKrkOzy6o?t=1m14s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:11",
+        "timestamp_seconds": 11,
+        "youtube_url": "https://www.youtube.com/watch?v=mnCsqnrL644&feature=youtu.be&t=11s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Snoke (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=mSQ3BJVMfAI",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Revisiting Snoke (From \"Star Wars: The Last Jedi\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=xrLBaE5QWUQ",
+        "film_code": "VIII"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/SequelTriologyThemeFiles/Xmls/3_KyloC_-_First_Order.musicxml",
+      "file_name": "3_KyloC_-_First_Order.musicxml"
+    }
+  },
+  {
+    "motif_id": "44. SNOKE",
+    "motif_name": "SNOKE",
+    "appearances": [
+      "VII",
+      "VIII",
+      "IX",
+      "M"
+    ],
+    "first_appearance": {
+      "film": "VII",
+      "timestamp": "0:51:50",
+      "cue_name": "Snoke",
+      "cue_number": "8m78"
+    },
+    "tracks": [
+      {
+        "track_name": "John Williams - Rey's Theme (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:33",
+        "timestamp_seconds": 33,
+        "youtube_url": "https://youtu.be/65As1V0vQDM?t=33",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Abduction (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:38",
+        "timestamp_seconds": 98,
+        "youtube_url": "https://youtu.be/IUs88IY1A00?t=1m38s",
+        "film_code": null
+      },
+      {
+        "track_name": "Star Wars The Last Jedi deleted scene Caretaker Village Sequence HD",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=-He5_RtDE1o",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - Farewell (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=0_9o_70UQJw&list=PLiNVoBckLqLmfYF2_5gxBiwz7b-tdVvl2&index=17&t=0s",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "John Williams - Maz's Counsel (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:39",
+        "timestamp_seconds": 159,
+        "youtube_url": "https://youtu.be/khq2TtKwH0s?t=159",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Farewell and The Trip (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:10",
+        "timestamp_seconds": 10,
+        "youtube_url": "https://youtu.be/Itzm8-kcOAg?t=10",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - Destiny of a Jedi (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:44",
+        "timestamp_seconds": 104,
+        "youtube_url": "https://youtu.be/x7EIJcVD1sY?t=104",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/SequelTriologyThemeFiles/Xmls/5_Snoke.musicxml",
+      "file_name": "5_Snoke.musicxml"
+    }
+  },
+  {
+    "motif_id": "46a. REY B (CHIMES)",
+    "motif_name": "REY B (CHIMES)",
+    "appearances": [
+      "VII",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "VII",
+      "timestamp": "0:11:38",
+      "cue_name": "The Scavenger",
+      "cue_number": ""
+    },
+    "tracks": [
+      {
+        "track_name": "John Williams - The Scavenger (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:53",
+        "timestamp_seconds": 53,
+        "youtube_url": "https://www.youtube.com/watch?v=Q3YcCLaTnBE&feature=youtu.be&t=53s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Scavenger (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:53",
+        "timestamp_seconds": 53,
+        "youtube_url": "https://www.youtube.com/watch?v=Q3YcCLaTnBE&feature=youtu.be&t=53s",
+        "film_code": null
+      },
+      {
+        "track_name": "Following the Crystal Critters  [Star Wars: The Last Jedi Unreleased Music] (Complete Soundtrack)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:01",
+        "timestamp_seconds": 1,
+        "youtube_url": "https://www.youtube.com/watch?v=0pFVFVZlczE&t=1s",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - The Force Is with You (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:40",
+        "timestamp_seconds": 40,
+        "youtube_url": "https://youtu.be/kIr-3GYLZMM?t=40",
+        "film_code": "IX"
+      },
+      {
+        "track_name": "John Williams - The Scavenger (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:53",
+        "timestamp_seconds": 53,
+        "youtube_url": "https://www.youtube.com/watch?v=Q3YcCLaTnBE&feature=youtu.be&t=53s",
+        "film_code": null
+      },
+      {
+        "track_name": "John Williams - The Scavenger (Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "01:02",
+        "timestamp_seconds": 62,
+        "youtube_url": "https://www.youtube.com/watch?v=Q3YcCLaTnBE&feature=youtu.be&t=1m2s",
+        "film_code": null
+      },
+      {
+        "track_name": "Rey Trains Wth Lightsaber - Star Wars: The Last Jedi (Highest Quality)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "00:00",
+        "timestamp_seconds": 0,
+        "youtube_url": "https://www.youtube.com/watch?v=xo8A_yxGcd0",
+        "film_code": "VIII"
+      },
+      {
+        "track_name": "John Williams - Reunion (From \"Star Wars: The Rise of Skywalker\"/Audio Only)",
+        "file_path": null,
+        "file_name": null,
+        "timestamp": "02:30",
+        "timestamp_seconds": 150,
+        "youtube_url": "https://youtu.be/lXACbiZIl4M?t=150",
+        "film_code": "IX"
+      }
+    ],
+    "musicxml": {
+      "file_path": "/Users/sid/Developer/UPF/SMC/Motif Discovery/Star-Wars-Thematic-Corpus/SequelTriologyThemeFiles/Xmls/7_Rey_B.musicxml",
+      "file_name": "7_Rey_B.musicxml"
+    }
+  },
+  {
+    "motif_id": "46b. REY C (GALOP)",
+    "motif_name": "REY C (GALOP)",
+    "appearances": [
+      "VII",
+      "VIII",
+      "IX"
+    ],
+    "first_appearance": {
+      "film": "VII",
+      "timestamp": "0:11:48",
+      "cue_name": "The Scavenger",
+      "cue_number": ""
+    },
+    "tracks": []
+  }
+]
