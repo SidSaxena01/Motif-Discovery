@@ -14,7 +14,7 @@ from utils.utils import (
     plot_star_wars_motif_matches,
 )
 
-JSON_MAPPING_FILE = "data/mappings/sw_motifs_tracks_mapping_sample.json"
+JSON_MAPPING_FILE = "data/mappings/sw_motifs_tracks_mapping.json"
 MELODIA_RESULTS_CSV = (
     "/Users/sid/Music/OST/Star Wars/separated/htdemucs_ft/processed/results.csv"
 )
@@ -25,7 +25,7 @@ def load_melodia_df(melodia_file: str) -> pd.DataFrame:
 
 
 def get_melodia_bpm_for_track(melodia_df: pd.DataFrame, filename: str) -> float:
-    print(f"Getting BPM for {filename}")
+    # print(f"Getting BPM for {filename}")
     return melodia_df[melodia_df["file"] == filename]["bpm"].values[0]
 
 
@@ -189,13 +189,15 @@ def processing_pipeline(
                 output_fig_folder=output_fig_folder,
                 fig_output_filename=f"{motif_id}_{track_name}_motif_matches.png",
             )
+            result["motif_id"] = motif_id
             results.append(result)
         break
 
-    pd.DataFrame(results).to_csv(output_csv, index=False)
-    print(f"{len(results)} results saved to {output_csv}")
     with open(output_json, "w") as f:
         json.dump(results, f, indent=4)
+    print(f"{len(results)} results saved to {output_csv}")
+    
+    pd.DataFrame(results).to_csv(output_csv, index=False)
     print(f"{len(results)} results saved to {output_json}")
     print(f"{len(skiped_tracks)} tracks were skipped due to missing data.")
 
