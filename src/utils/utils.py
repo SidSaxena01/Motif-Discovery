@@ -568,6 +568,7 @@ def plot_star_wars_motif_matches(
     top_k=5,
     out_folder="figures",
     out_filename="star_wars_motif_matches.png",
+    plot_title="Star Wars Main Theme - Motif Matches",
     show=True,
 ) -> Dict[str, Dict[str, float]]:
     """
@@ -606,7 +607,7 @@ def plot_star_wars_motif_matches(
 
     # Plot the pitch contour
     plt.plot(pitch_times, pitch_array, linewidth=1, color="black", alpha=0.5)
-    plt.title("Star Wars Main Theme - Motif Matches", fontsize=20)
+    plt.title(plot_title, fontsize=18)
     plt.xlabel("Time (s)", fontsize=15)
     plt.ylabel("Frequency (Hz)", fontsize=15)
     plt.grid(True, alpha=0.3)
@@ -673,7 +674,7 @@ def plot_star_wars_motif_matches(
                 ha="left",
             )
 
-        match_results[f"math-{i+1}"] = {
+        match_results[f"match-{i+1}"] = {
             "start_time": start_time,
             "end_time": end_time,
             "duration": end_time - start_time,
@@ -712,7 +713,8 @@ def plot_star_wars_motif_matches(
         )
 
     # Save the figure
-    save_path = os.path.join(out_folder, out_filename)
+    os.makedirs(out_folder, exist_ok=True)
+    save_path = os.path.join(out_folder, out_filename.replace("/", "_"))
     plt.savefig(save_path, dpi=150)
 
     # Show or close
