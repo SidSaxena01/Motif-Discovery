@@ -1,5 +1,7 @@
 import itertools
 import os
+from collections import defaultdict
+from typing import Dict
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -567,7 +569,7 @@ def plot_star_wars_motif_matches(
     out_folder="figures",
     out_filename="star_wars_motif_matches.png",
     show=True,
-):
+) -> Dict[str, Dict[str, float]]:
     """
     Plot the Star Wars pitch contour along with up to 'top_k' motif matches.
     Mimics the logic from your reference cell, including background shading
@@ -619,6 +621,8 @@ def plot_star_wars_motif_matches(
     # Convert top_k to the actual number of matches we can plot
     n_matches = min(top_k, len(match_indices))
 
+    match_results = defaultdict(dict)
+
     # Plot each match
     for i in range(n_matches):
         idx = match_indices[i]
@@ -669,6 +673,13 @@ def plot_star_wars_motif_matches(
                 ha="left",
             )
 
+        match_results[f"math-{i+1}"] = {
+            "start_time": start_time,
+            "end_time": end_time,
+            "duration": end_time - start_time,
+            "distance": dist,
+        }
+
     # Add a legend (for the lines we plotted)
     if n_matches > 0:
         plt.legend(loc="upper right", fontsize=8, ncol=2, bbox_to_anchor=(1.15, 1))
@@ -711,6 +722,7 @@ def plot_star_wars_motif_matches(
         plt.close()
 
     print(f"Figure saved to: {save_path}")
+    return match_results
 
 
 def main():

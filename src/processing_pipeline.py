@@ -6,11 +6,21 @@ from typing import Any, Dict
 
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 
 from utils.utils import (detect_motif_in_track, plot_motif_detection_results,
                          plot_star_wars_motif_matches)
 
 JSON_MAPPING_FILE = "star_wars_comprehensive_mapping_hybrid.json"
+MELODIA_RESULTS_CSV = "results.csv"
+
+
+def load_melodia_df(melodia_file: str) -> pd.DataFrame:
+    return pd.read_csv(melodia_file)
+
+
+def get_melodia_bpm_for_track(melodia_df: pd.DataFrame, filename: str) -> float:
+    return melodia_df[melodia_df["file"] == filename]["bpm"].values[0]
 
 
 def load_mapping_file(json_file: str) -> Dict[Any, Any]:
@@ -23,6 +33,7 @@ def get_motif_matches(
     top_k: int = 5,
     fig_output_folder: str = "figures",
     fig_output_filename: str = "motif_matches.png",
+    show_plot: bool = False,
 ) -> Dict[Any, Any]:
     sw_pitch = mass_results["audio_pitch"]
     sw_pitch_times = mass_results["audio_pitch_times"]
@@ -48,7 +59,7 @@ def get_motif_matches(
         working_distances[exclusion_start:exclusion_end] = np.inf
 
     # 4) Finally, call your special plotting function
-    plot_star_wars_motif_matches(
+    return plot_star_wars_motif_matches(
         pitch_array=sw_pitch,
         pitch_times=sw_pitch_times,
         match_indices=match_indices,
@@ -57,27 +68,30 @@ def get_motif_matches(
         top_k=k,  # or whatever number of top matches to highlight
         out_folder=fig_output_folder,
         out_filename=fig_output_filename,
-        show=False,
+        show=show_plot,
     )
 
 
 def check_if_file_exists(filepath: str) -> bool:
     return Path(filepath).exists()
 
+
 def process_audio_file(
     input_audio_filepath: str,
     input_musicxml_filepath: str,
-    output_filepath: str,
+    melodia_results_df: pd.DataFrame,
+    output_fig_folder: str = "figures",
+    fig_output_filename: str = "motif_matches.png",
     match_top_k: int = 5,
     stump_window_size: int = 2048,
 ) -> Dict[Any, Any]:
-    
+
     if not check_if_file_exists(input_audio_filepath):
         raise FileNotFoundError(f"File not found: {input_audio_filepath}")
     if not check_if_file_exists(input_musicxml_filepath):
         raise FileNotFoundError(f"File not found: {input_musicxml_filepath}")
 
-    bpm_estimate = 120
+    bpm_estimate = get_melodia_bpm_for_track(melodia_results_df, input_audio_filepath)
     # print(f"Processing audio file: {input_audio_filepath} vs. {input_musicxml_filepath}")
     mass_results = detect_motif_in_track(
         input_audio_filepath, input_musicxml_filepath, bpm_estimate, method="mass"
@@ -97,39 +111,47 @@ def process_audio_file(
         window_size=stump_window_size,
     )
 
-    # plot_motif_detection_results(results=mass_results, method="mass")
+    plot_motif_detection_results(results=mass_results, method="mass", show_plot=False)
     # plot_motif_detection_results(results=match_results, method="match")
     # plot_motif_detection_results(results=stump_results, method="stump")
-
     timestamps_results = get_motif_matches(
         mass_results=mass_results,
         top_k=match_top_k,
-        fig_output_folder="figures",
-        fig_output_filename=f"{output_filepath}_motif_matches.png",
+        fig_output_folder=output_fig_folder,
+        fig_output_filename=fig_output_filename,
+        show_plot=False,
     )
-
     return {
         "input_audio_filepath": input_audio_filepath,
-        "output_filepath": output_filepath,
+        "timestamps_results": timestamps_results,
+        "mass_results": mass_results,
+        "match_results": match_results,
+        "stump_results": stump_results,
     }
 
 
 def processing_pipeline(
     show_missing_data=False,
     json_mapping_file: str = JSON_MAPPING_FILE,
-    output_folder: str = "output_folder",
+    output_fig_folder: str = "figures",
     output_csv: str = "processing_pipeline_results.csv",
+    output_json: str = "processing_pipeline_results.json",
+    melodia_results_csv: str = MELODIA_RESULTS_CSV,
 ):
     motif_mapping = load_mapping_file(json_mapping_file)
+
+    print(f"Processing Pipeline")
+    print("Loading Melodia Data")
+    melodia_df = load_melodia_df(melodia_results_csv)
 
     results = []
     skiped_tracks = []
 
-    for motif_data in motif_mapping:
+    for motif_data in tqdm(motif_mapping, desc="Processing Motifs"):
         motif_id = motif_data["motif_id"]
         motif_xml_path = motif_data["musicxml"]
 
-        for track in motif_data["tracks"]:
+        for track in tqdm(motif_data["tracks"], desc="Processing Tracks", leave=False):
             track_name = track.get("track_name", None)
             track_audio_path = track.get("file_path", None)
             if track_name is None or track_audio_path is None:
@@ -141,12 +163,17 @@ def processing_pipeline(
             result = process_audio_file(
                 input_audio_filepath=track_audio_path,
                 input_musicxml_filepath=motif_xml_path,
-                output_filepath=f"{motif_id}_{track_name}_output.wav",
+                melodia_results_df=melodia_df,
+                output_fig_folder=output_fig_folder,
+                fig_output_filename=f"{motif_id}_{track_name}_motif_matches.png",
             )
             results.append(result)
 
     pd.DataFrame(results).to_csv(output_csv, index=False)
     print(f"{len(results)} results saved to {output_csv}")
+    with open(output_json, "w") as f:
+        json.dump(results, f, indent=4)
+    print(f"{len(results)} results saved to {output_json}")
     print(f"{len(skiped_tracks)} tracks were skipped due to missing data.")
 
 
