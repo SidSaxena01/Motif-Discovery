@@ -56,7 +56,7 @@ Automatic motif detection is a central task in Music Information Retrieval (MIR)
 The key objectives of this project are to:
 \begin{itemize}
     \item Develop an automated pipeline that integrates audio-based melody extraction and symbolic thematic alignment.
-    \item Compare traditional motif detection methods (using matrix profiles via stumpy and DTW) on the Star Wars dataset.
+    \item Compare traditional motif detection methods (using matrix profiles via stumpy\cite{law2019stumpy} and DTW) on the Star Wars dataset.
     \item Evaluate motif detection accuracy by aligning known symbolic motifs with automatically extracted audio features.
     \item Investigate cross-track motif similarity to explore recurrent patterns across different audio recordings.
 \end{itemize}
@@ -66,9 +66,9 @@ The report is organized as follows. Section II reviews related work and datasets
 
 \section{Related Work}
 
-Previous studies have utilized both signal processing and deep learning approaches for motif detection. The matrix profile method has been successfully applied in exemplar works (e.g., Nuttall et al., 2023) for discovering repeated segments in time series data. Alternative methods—such as techniques replacing DTW with string matching (Ganguli et al., 2017)—demonstrate the value of symbolic abstraction in reducing computational complexity. More recent approaches have involved deep learning (Krause et al., 2021) to detect leitmotif activities. Our work builds on these foundations by applying these methods to film soundtracks and addressing data synchronization challenges.
+Previous studies have utilized both signal processing and deep learning approaches for motif detection. The matrix profile method has been successfully applied in exemplar works (e.g., \cite{Nuttall2023}) for discovering repeated segments in time series data. Alternative methods—such as techniques replacing DTW with string matching \cite{Ganguli2017}—demonstrate the value of symbolic abstraction in reducing computational complexity. More recent approaches have involved deep learning \cite{Krause2021} to detect leitmotif activities. Our work builds on these foundations by applying these methods to film soundtracks and addressing data synchronization challenges.
 
-The Star Wars thematic corpus\footnote{\url{https://github.com/Computational-Cognitive-Musicology-Lab/Star-Wars-Thematic-Corpus/}} includes multiple themes available in symbolic formats (XML, Humdrum) along with time-stamped motif occurrences. In the broader MIR community, annotated datasets for orchestral music are limited, making motif annotation and detection an open challenge. This project not only validates motif detection techniques on a complex dataset but also contributes to improved annotation strategies.
+The Star Wars thematic corpus\footnote{\href{https://github.com/Computational-Cognitive-Musicology-Lab/Star-Wars-Thematic-Corpus/}{Star Wars thematic corpus GitHub}} includes multiple themes available in symbolic formats (XML, Humdrum) along with time-stamped motif occurrences. In the broader MIR community, annotated datasets for orchestral music are limited, making motif annotation and detection an open challenge. This project not only validates motif detection techniques on a complex dataset but also contributes to improved annotation strategies.
 
 \section{Methodology}
 
@@ -109,12 +109,12 @@ Two primary methods are employed for melody extraction:
 \subsection{Motif Detection and Cross-Track Comparison}
 \textbf{Motif Detection Techniques:}
 \begin{itemize}
-    \item \textbf{Stumpy (Matrix Profile):} The matrix profile is computed on the extracted pitch contours to rapidly identify candidate motifs. Hyper-parameters such as window length and exclusion zones were tuned experimentally.
-    \item \textbf{Dynamic Time Warping (DTW):} To account for tempo variations and subtle interpretative differences in motif renditions, DTW is used for aligning time series data. While this method provides precise alignment, it incurs higher computational complexity and is applied primarily as a refinement tool.
+    \item \textbf{Stumpy (Matrix Profile):} We leverage the Python library \texttt{stumpy}\cite{law2019stumpy} to compute the matrix profile on the extracted pitch contours. The library enables rapid identification of candidate motifs. Hyper-parameters such as window length and exclusion zones were tuned experimentally.
+    \item \textbf{Dynamic Time Warping (DTW):} To account for tempo variations and subtle interpretative differences in motif renditions, DTW is used for aligning time series data. Although this method provides precise alignment, it incurs higher computational complexity and is applied primarily as a refinement tool.
 \end{itemize}
 
 \noindent\textbf{Cross-Track Motif Comparison:}
-To explore motif recurrence across various audio tracks, pitch contour segments are compared using DTW (figure \ref{fig:dtw-match}) and pairwise similarity measures (e.g., via \texttt{stumpy.mass},  figure \ref{fig:mass}). This analysis (\ref{fig:dtw-warp}) aims to uncover recurrent motifs that appear consistently across multiple tracks, offering insights into thematic connections within the dataset.
+To explore motif recurrence across various audio tracks, pitch contour segments are compared using DTW (Figure~\ref{fig:dtw-match}) and pairwise similarity measures (e.g., via \texttt{stumpy.mass}, Figure~\ref{fig:mass}). This analysis (Figure~\ref{fig:dtw-warp}) aims to uncover recurrent motifs that appear consistently across multiple tracks, offering insights into thematic connections within the dataset.
 
 \begin{figure}[htbp]
     \centering
@@ -126,14 +126,14 @@ To explore motif recurrence across various audio tracks, pitch contour segments 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{figures/dtw-matches-warping-path.png}
-    \caption{DTW warping path}
+    \caption{DTW warping path.}
     \label{fig:dtw-warp}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{figures/motif_detection_mass.png}
-    \caption{Motif detection using mass algorithm.}
+    \caption{Motif detection using the MASS algorithm.}
     \label{fig:mass}
 \end{figure}
 
@@ -157,6 +157,7 @@ A detailed flowchart of the pipeline is maintained in the project documentation.
 
 \subsection{Performance of Melody Extraction}
 Initial experiments indicate that Melodia demonstrates robustness in polyphonic contexts due to its deep-salience algorithm, which effectively identifies melody lines even when multiple instruments are present. In contrast, CREPE excels in providing clearer pitch contours for isolated segments. Based on these observations, we selected Melodia for subsequent motif detection experiments.
+
 \subsection{Motif Detection Results}
 Upon evaluating the results of our motif detection process, we estimate that approximately 80\% of the identified matches were accurate. This indicates that our method is yielding promising results, suggesting a strong potential for reliable motif detection in musical compositions.
 
@@ -176,10 +177,10 @@ Future work will focus on computational refinements and exploring adaptive param
 
 \subsection{Interpretation of Preliminary Results}
 The integration of audio-based extraction with symbolic thematic alignment validates our hybrid approach and provides a basis for further refinement. Some discrepancies remain between annotated motifs and automatically detected ones, highlighting the need for improved synchronization and parameter optimization.
-We have not evaluated against the extracted time-stamps from the catalogue. This is because the catalogue \ref{foot:catalogue} only contains one time-stamp per movie apperance.
+We have not evaluated against the extracted time-stamps from the catalogue. This is because the catalogue \ref{foot:catalogue} only contains one time-stamp per movie appearance.
 
 \subsection{Comparison of Methods}
-Stumpy offers rapid candidate motif detection and computational efficiency, though it is sensitive to parameter choices. In contrast, DTW yields more precise alignments at the expense of increased computational load. The trade-off between speed and accuracy is a key consideration in refining the pipeline.
+Stumpy offers rapid candidate motif detection and computational efficiency—thanks to the well-optimized \texttt{stumpy} library—but is sensitive to parameter choices. In contrast, DTW yields more precise alignments at the expense of increased computational load. The trade-off between speed and accuracy is a key consideration in refining the pipeline.
 
 \subsection{Limitations and Open Questions}
 Current limitations include scalability challenges, dependency on manual hyper-parameter tuning, and difficulties in cross-track motif synchronization. Ongoing experiments aim to address these issues and clarify the ideal balance between various methods.
@@ -209,6 +210,7 @@ This report presents an end-to-end pipeline for automatic motif detection in the
 \bibitem{Krause2021} M. Krause, M. Müller, and C. Weiß, ``Towards Leitmotif Activity Detection in Opera Recordings,'' \textit{Trans. Int. Soc. Music Inf. Retrieval}, vol. 4, no. 1, pp. 127--140, 2021, doi:10.5334/tismir.116.
 \bibitem{DeFossez2019} A. Defossez, N. Usunier, L. Bottou, and F. R. Bach, ``Demucs: Deep Extractor for Music Sources with extra unlabeled data remixed,'' \textit{CoRR}, vol. abs/1909.01174, 2019.
 \bibitem{Arthur2023} C. Arthur, F. Lehman, and J. McNamara, ``Presenting the SWTC: A Symbolic Corpus of Themes from John Williams' Star Wars Episodes I-IX,'' arXiv preprint arXiv:2309.03298, 2023. Available: \url{https://arxiv.org/abs/2309.03298}.
+\bibitem{law2019stumpy} S. M. Law, ``STUMPY: A Powerful and Scalable Python Library for Time Series Data Mining,'' \textit{Journal of Open Source Software}, vol. 4, no. 39, p. 1504, 2019.
 \end{thebibliography}
 
 \section*{Appendix: Visualizations of Motif Detection Results}
@@ -220,4 +222,4 @@ This report presents an end-to-end pipeline for automatic motif detection in the
     \label{fig:themes}
 \end{figure}
 
-\enddocument
+\end{document}
