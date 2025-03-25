@@ -69,46 +69,49 @@ The Star Wars thematic corpus includes multiple themes available in symbolic for
 
 \section{Methodology}
 
-\subsection{Audio Stem Separation using Demucs}
-Before proceeding with melody extraction, we applied a source separation step using Demucs (model: ht\_demucs\_ft). This advanced deep-learning model decomposes the audio tracks into four stems: vocals, bass, drums, and other. In our implementation, each audio file was processed with Demucs, and we observed that isolating the \textit{other} stem led to slightly improved melody extraction results. We hypothesize that by explicitly extracting the drums and bass stems, the algorithm is better able to focus on the relevant melodic content present in the remaining signal. This preprocessing step thus aids both the CREPE and Melodia models in achieving more accurate pitch contour extraction.
-
-\subsection{Data Description and Preprocessing}
-The system leverages two sources of data:
+\subsection{Dataset Digitisation}
+To enable subsequent processing of both audio and symbolic data, the initial dataset was converted into a digital format through the following steps:
 \begin{itemize}
-    \item \textbf{Symbolic:} Using \texttt{music21}, XML files are parsed to extract thematic elements such as motifs and phrases. The note sequences are then transformed into time-aligned arrays, with interpolation strategies ensuring synchronization with audio-derived features.
-    \item \textbf{Audio:} Raw audio files (WAV format) are processed to extract pitch contours.
+    \item \textbf{OCR Processing:} Raw text was extracted from the PDF using Optical Character Recognition.
+    \item \textbf{Metadata Retrieval:} The YouTube API was employed to obtain track names associated with each YouTube link.
+    \item \textbf{Data Mapping:} Fuzzy matching techniques, supplemented by a Large Language Model (LLM), were used to map motif names to their corresponding MusicXML files and to align YouTube titles with the available OST filenames on disk.
+\end{itemize}
+This digitisation process ensures that both symbolic and audio information are accurately aligned and ready for further analysis.
+
+\subsection{Audio Stem Separation and Preprocessing}
+Prior to melody extraction, audio tracks were decomposed into distinct stems using Demucs (model: \texttt{ht\_demucs\_ft}). This advanced deep-learning model separates the audio into vocals, bass, drums, and other components. Our experiments revealed that isolating the \textit{other} stem improved the results of melody extraction, as explicitly extracting the drums and bass allowed the models to focus on the most relevant melodic content. This preprocessing step benefits both the CREPE and Melodia models by enhancing the accuracy of pitch contour extraction.
+
+\subsection{Data Sources and Preprocessing}
+Our system leverages two complementary data sources:
+\begin{itemize}
+    \item \textbf{Symbolic Data:} MusicXML files are parsed using \texttt{music21} to extract thematic elements such as motifs and phrases. The resulting note sequences are transformed into time-aligned arrays, with interpolation strategies ensuring precise synchronization with audio-derived features.
+    \item \textbf{Audio Data:} Raw audio files (WAV format) are processed to extract pitch contours. Preprocessing of audio includes normalization and resampling to 16~kHz, as required by the CREPE framework.
 \end{itemize}
 
-\subsection{Audio-based Melody Extraction}
-\textbf{CREPE:}
+\subsection{Audio-Based Melody Extraction}
+Two primary methods are employed for melody extraction:
+
+\noindent\textbf{CREPE:}
 \begin{itemize}
-    \item Utilizes a deep-learning framework to estimate the main pitch component from complex audio environments.
-    \item Preprocessing includes audio normalization and resampling to 16 kHz.
+    \item Utilizes a deep-learning framework to estimate the primary pitch component from complex audio environments.
+    \item Preprocessing involves normalizing the audio and resampling to 16~kHz.
 \end{itemize}
 
-\textbf{Melodia:}
+\noindent\textbf{Melodia:}
 \begin{itemize}
-    \item Implements a signal processing technique to extract the predominant melody, relying on Viterbi encoding.
-    \item Although sensitive to noise and overlapping sounds, it can yield clearer pitch contours and is computationally efficient.
-    \item For our application, Melodia’s performance and speed made it the preferred choice.
+    \item Implements a signal processing approach that utilizes Viterbi encoding to extract the predominant melody.
+    \item Despite its sensitivity to noise and overlapping sounds, Melodia is computationally efficient and yields clearer pitch contours, making it the preferred choice for our application.
 \end{itemize}
 
-\subsection{Motif Detection Techniques}
-\textbf{Stumpy (Matrix Profile):}
+\subsection{Motif Detection and Cross-Track Comparison}
+\textbf{Motif Detection Techniques:}
 \begin{itemize}
-    \item Computes the matrix profile on the extracted pitch contours to rapidly identify candidate motifs.
-    \item Hyper-parameters such as window length and exclusion zones were tuned experimentally.
+    \item \textbf{Stumpy (Matrix Profile):} The matrix profile is computed on the extracted pitch contours to rapidly identify candidate motifs. Hyper-parameters such as window length and exclusion zones were tuned experimentally.
+    \item \textbf{Dynamic Time Warping (DTW):} To account for tempo variations and subtle interpretative differences in motif renditions, DTW is used for aligning time series data. While this method provides precise alignment, it incurs higher computational complexity and is applied primarily as a refinement tool.
 \end{itemize}
 
-\textbf{Dynamic Time Warping (DTW):}
-\begin{itemize}
-    \item Aligns time series data to account for tempo variations and subtle interpretative differences in motif renditions.
-    \item Provides more precise alignment at the cost of higher computational complexity, primarily serving as a refinement tool.
-\end{itemize}
-
-\subsection{Cross-Track Motif Comparison}
-To explore motif recurrence across different audio tracks, we compare pitch contour segments using DTW and pairwise similarity measures (e.g., via \texttt{stumpy.mass}). This preliminary analysis aims to uncover recurrent motifs that appear across multiple tracks.
-
+\noindent\textbf{Cross-Track Motif Comparison:}
+To explore motif recurrence across various audio tracks, pitch contour segments are compared using DTW and pairwise similarity measures (e.g., via \texttt{stumpy.mass}). This analysis aims to uncover recurrent motifs that appear consistently across multiple tracks, offering insights into thematic connections within the dataset.
 \section{Experimental Setup}
 
 \subsection{Pipeline Design}
@@ -186,12 +189,32 @@ This report presents an end-to-end pipeline for automatic motif detection in the
 \bibitem{DeFossez2019} A. D{\'e}fossez, N. Usunier, L. Bottou, and F. R. Bach, ``Demucs: Deep Extractor for Music Sources with extra unlabeled data remixed,'' \textit{CoRR}, vol. abs/1909.01174, 2019.
 \end{thebibliography}
 
-\section*{Appendices}
+\section*{Appendix: Visualizations of Motif Detection Results}
 
-\subsection*{Appendix A: Visualizations of Motif Detection Results}
-Visualizations include candidate motif segments extracted via the matrix profile, DTW alignment graphs, and cross-track motif comparisons. Detailed figures and supporting documentation are provided in the supplementary materials.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_mass.png}
+    \caption{Motif Detection via MASS.}
+    \label{fig:mass}
+\end{figure}
 
-\subsection*{Appendix B: Code Snippets and Pseudocode for Key Pipeline Steps}
-Selected code snippets include audio preprocessing for CREPE and Melodia, XML parsing with \texttt{music21}, and DTW-based alignment functions. These are available in the project repository.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_match.png}
+    \caption{Motif Detection via MATCH.}
+    \label{fig:match}
+\end{figure}
 
-\end{document}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_stump.png}
+    \caption{Motif Detection via STUMP.}
+    \label{fig:stump}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/star_wars_motif_matches.png}
+    \caption{Main Theme's Melody with Sections of Various Themes.}
+    \label{fig:starwars}
+\end{figure}
