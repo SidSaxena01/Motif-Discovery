@@ -524,6 +524,8 @@ def process_star_wars_pdf(pdf_path):
 # Example usage
 pdf_path = "data/Star-Wars-Thematic-Catalogue.pdf"
 output_dir = "data/mappings"
+os.makedirs(output_dir, exist_ok=True)
+
 result = process_star_wars_pdf(pdf_path)
 
 # Save the result to a JSON file
