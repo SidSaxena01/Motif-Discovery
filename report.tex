@@ -189,9 +189,35 @@ This report presents an end-to-end pipeline for automatic motif detection in the
 \section*{Appendices}
 
 \subsection*{Appendix A: Visualizations of Motif Detection Results}
-Visualizations include candidate motif segments extracted via the matrix profile, DTW alignment graphs, and cross-track motif comparisons. Detailed figures and supporting documentation are provided in the supplementary materials.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_mass.png}
+    \caption{Motif Detection via MASS.}
+    \label{fig:mass}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_match.png}
+    \caption{Motif Detection via MATCH.}
+    \label{fig:match}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/motif_detection_stump.png}
+    \caption{Motif Detection via STUMP.}
+    \label{fig:stump}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/star_wars_motif_matches.png}
+    \caption{Main Theme's Melody with Sections of Various Themes.}
+    \label{fig:starwars}
+\end{figure}
 
 \subsection*{Appendix B: Code Snippets and Pseudocode for Key Pipeline Steps}
 Selected code snippets include audio preprocessing for CREPE and Melodia, XML parsing with \texttt{music21}, and DTW-based alignment functions. These are available in the project repository.
-
 \end{document}
