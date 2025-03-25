@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref} % for hyperlinks
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -111,7 +113,15 @@ Two primary methods are employed for melody extraction:
 \end{itemize}
 
 \noindent\textbf{Cross-Track Motif Comparison:}
-To explore motif recurrence across various audio tracks, pitch contour segments are compared using DTW and pairwise similarity measures (e.g., via \texttt{stumpy.mass}). This analysis aims to uncover recurrent motifs that appear consistently across multiple tracks, offering insights into thematic connections within the dataset.
+To explore motif recurrence across various audio tracks, pitch contour segments are compared using DTW (figure \ref{fig:dtw-match}) and pairwise similarity measures (e.g., via \texttt{stumpy.mass},  figure \ref{fig:mass}). This analysis (\ref{fig:dtw-warp}) aims to uncover recurrent motifs that appear consistently across multiple tracks, offering insights into thematic connections within the dataset.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/dtw-matches.png}
+    \caption{DTW matches.}
+    \label{fig:dtw-match}
+\end{figure}
+
 \section{Experimental Setup}
 
 \subsection{Pipeline Design}
@@ -186,35 +196,30 @@ This report presents an end-to-end pipeline for automatic motif detection in the
 \bibitem{Ganguli2017} K. K. Ganguli, A. Lele, S. Pinjani, P. Rao, A. Srinivasamurthy, and S. Gulati, ``Melodic shape stylization for robust and efficient motif detection in Hindustani vocal music,'' in \textit{Proc. 2017 Twenty-Third National Conference on Communications (NCC)}, pp. 1--6, 2017, doi:10.1109/NCC.2017.8077055.
 \bibitem{Hao2013} Y. Hao, M. Shokoohi-Yekta, G. Papageorgiou, and E. Keogh, ``Parameter-Free Audio Motif Discovery in Large Data Archives,'' in \textit{Proc. 2013 IEEE 13th International Conference on Data Mining}, pp. 261--270, 2013, doi:10.1109/ICDM.2013.30.
 \bibitem{Krause2021} M. Krause, M. Müller, and C. Weiß, ``Towards Leitmotif Activity Detection in Opera Recordings,'' \textit{Trans. Int. Soc. Music Inf. Retrieval}, vol. 4, no. 1, pp. 127--140, 2021, doi:10.5334/tismir.116.
-\bibitem{DeFossez2019} A. D{\'e}fossez, N. Usunier, L. Bottou, and F. R. Bach, ``Demucs: Deep Extractor for Music Sources with extra unlabeled data remixed,'' \textit{CoRR}, vol. abs/1909.01174, 2019.
+\bibitem{DeFossez2019} A. Defossez, N. Usunier, L. Bottou, and F. R. Bach, ``Demucs: Deep Extractor for Music Sources with extra unlabeled data remixed,'' \textit{CoRR}, vol. abs/1909.01174, 2019.
 \end{thebibliography}
 
 \section*{Appendix: Visualizations of Motif Detection Results}
 
 \begin{figure}[htbp]
     \centering
+    \includegraphics[width=0.9\linewidth]{figures/1a. MAIN THEME_Star Wars Episode IV A New Hope (1977) Soundtrack 02 Main Title _ Rebel Blockade _Runner Medley_motif_matches.png}
+    \caption{Main motif detection in main theme.}
+    \label{fig:themes}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/dtw-matches-warping-path.png}
+    \caption{DTW warping path}
+    \label{fig:dtw-warp}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
     \includegraphics[width=0.9\linewidth]{figures/motif_detection_mass.png}
-    \caption{Motif Detection via MASS.}
+    \caption{Motif detection using mass algorithm.}
     \label{fig:mass}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/motif_detection_match.png}
-    \caption{Motif Detection via MATCH.}
-    \label{fig:match}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/motif_detection_stump.png}
-    \caption{Motif Detection via STUMP.}
-    \label{fig:stump}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/star_wars_motif_matches.png}
-    \caption{Main Theme's Melody with Sections of Various Themes.}
-    \label{fig:starwars}
-\end{figure}
+\enddocument
